@@ -56,10 +56,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="doudouQAQ">
 <meta property="og:description" content="windows上mysql安装下载安装包，解压到A:\web\mysql-8.0.17-winx64 在A:\web\mysql-8.0.17-winx64中添加配置文件my.ini 1234567891011121314151617[client]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]# 设置3306端口port = 3306#">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-01T11:30:01.983Z">
+<meta property="og:updated_time" content="2019-10-01T15:20:13.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows上mysql安装">
 <meta name="twitter:description" content="windows上mysql安装下载安装包，解压到A:\web\mysql-8.0.17-winx64 在A:\web\mysql-8.0.17-winx64中添加配置文件my.ini 1234567891011121314151617[client]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]# 设置3306端口port = 3306#">
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  361 字
+                  410 字
                 </span>
               
 
@@ -418,6 +418,11 @@
 <h2 id="navicat-2059问题"><a href="#navicat-2059问题" class="headerlink" title="navicat 2059问题"></a>navicat 2059问题</h2><p><strong>原因：</strong> 8+ 版本使用的密码加密规则为 。caching_sha2_password而 navicate 驱动目前不支持新加密规则，解决问题方法有两种，一种是升级 navicat 驱动，一种是把 mysql 用户登录密码加密规则还原成 mysql_native_password，这里我们将 mysql 规则修改回之前的 mysql_native_password，</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;你的密码&apos; PASSWORD EXPIRE NEVER; # 修改加密规则 </span><br><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;你的密码&apos;; # 更新一下用户的密码 </span><br><span class="line">FLUSH PRIVILEGES; #刷新权限</span><br></pre></td></tr></table></figure>
 
+<h2 id="navicat-1130问题"><a href="#navicat-1130问题" class="headerlink" title="navicat 1130问题"></a>navicat 1130问题</h2><p>解决方法</p>
+<p>登录数据库<code>mysql -u root -p</code></p>
+<p>执行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;您的数据库密码&apos; WITH GRANT OPTION;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -430,6 +435,17 @@
     
 
     
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
 
     <footer class="post-footer">
       
@@ -537,7 +553,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -548,7 +564,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -559,7 +575,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -592,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#windows上mysql安装"><span class="nav-number">1.</span> <span class="nav-text">windows上mysql安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-MySQL-数据库"><span class="nav-number">1.1.</span> <span class="nav-text">启动 MySQL 数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化数据库"><span class="nav-number">1.2.</span> <span class="nav-text">初始化数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装命令"><span class="nav-number">1.3.</span> <span class="nav-text">安装命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动命令"><span class="nav-number">1.4.</span> <span class="nav-text">启动命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登录mysql"><span class="nav-number">1.5.</span> <span class="nav-text">登录mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#navicat-2059问题"><span class="nav-number">1.6.</span> <span class="nav-text">navicat 2059问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#windows上mysql安装"><span class="nav-number">1.</span> <span class="nav-text">windows上mysql安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-MySQL-数据库"><span class="nav-number">1.1.</span> <span class="nav-text">启动 MySQL 数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化数据库"><span class="nav-number">1.2.</span> <span class="nav-text">初始化数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装命令"><span class="nav-number">1.3.</span> <span class="nav-text">安装命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动命令"><span class="nav-number">1.4.</span> <span class="nav-text">启动命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登录mysql"><span class="nav-number">1.5.</span> <span class="nav-text">登录mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#navicat-2059问题"><span class="nav-number">1.6.</span> <span class="nav-text">navicat 2059问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#navicat-1130问题"><span class="nav-number">1.7.</span> <span class="nav-text">navicat 1130问题</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1127,7 +1143,7 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/clicklove.js"></script>
