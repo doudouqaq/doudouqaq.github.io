@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/10/01/博客搭建记录/1569906872504.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/01/博客搭建记录/%E5%9B%BE%E7%89%87%E5%90%8D%E5%AD%97.%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F">
-<meta property="og:updated_time" content="2019-10-01T15:04:54.654Z">
+<meta property="og:updated_time" content="2019-10-03T10:31:43.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客搭建记录">
 <meta name="twitter:description" content="博客搭建环境配置首先要具备node.js和Git。 初始化博客在任意文件夹下创建一个blog文件夹，在blog文件夹中运行Git bash here输入命令行，完成博客的初始化。 12$ npm install -g hexo-cli$ hexo init  安装完成后，指定文件夹的目录如下： 1234567├── _config.yml├── package.json├── scaffolds├">
@@ -371,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.1k 字
+                  1.7k 字
                 </span>
               
 
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 min
+                  8 min
                 </span>
               
             </div>
@@ -473,6 +473,22 @@
 <p>在<code>\themes\next\layout\_layout.swig</code>文件末尾添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clicklove.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
+<h2 id="看板娘"><a href="#看板娘" class="headerlink" title="看板娘"></a>看板娘</h2><p>安装模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>站点配置文件</code> 或 <code>主题配置文件</code> 中新增如下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https://github.com/EYHN/hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  # enable: false</span><br><span class="line">  scriptFrom: local # 默认</span><br><span class="line">  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)</span><br><span class="line">  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径</span><br><span class="line">  pluginModelPath: assets/ # 模型文件相对与插件根目录路径</span><br><span class="line">  # scriptFrom: jsdelivr # jsdelivr CDN</span><br><span class="line">  # scriptFrom: unpkg # unpkg CDN</span><br><span class="line">  # scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url</span><br><span class="line">  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span><br><span class="line">  debug: false # 调试, 是否在控制台输出日志</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko # npm-module package name</span><br><span class="line">    # use: wanko # 博客根目录/live2d_models/ 下的目录名</span><br><span class="line">    # use: ./wives/wanko # 相对于博客根目录的路径</span><br><span class="line">    # use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true # 手机中是否展示</span><br></pre></td></tr></table></figure>
+
+<h2 id="复制功能"><a href="#复制功能" class="headerlink" title="复制功能"></a>复制功能</h2><p>下载第三方插件：<a href="https://github.com/zenorocha/clipboard.js" target="_blank" rel="noopener">clipboard.js</a>，保存文件到 <code>theme/next/source/js/src</code> 下。</p>
+<p>在 <code>theme/next/source/js/src</code> 目录下，创建 <code>clipboard-use.js</code>，添加内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/*页面载入完成后，创建复制按钮*/</span><br><span class="line">!function (e, t, a) &#123; </span><br><span class="line">  /* code */</span><br><span class="line">  var initCopyCode = function()&#123;</span><br><span class="line">    var copyHtml = &apos;&apos;;</span><br><span class="line">    copyHtml += &apos;&lt;button class=&quot;btn-copy&quot; data-clipboard-snippet=&quot;&quot;&gt;&apos;;</span><br><span class="line">    copyHtml += &apos;&lt;span&gt;复制&lt;/span&gt;&apos;;</span><br><span class="line">    copyHtml += &apos;&lt;/button&gt;&apos;;</span><br><span class="line">    $(&quot;.highlight .code pre&quot;).before(copyHtml);</span><br><span class="line">    new ClipboardJS(&apos;.btn-copy&apos;, &#123;</span><br><span class="line">        target: function(trigger) &#123;</span><br><span class="line">            return trigger.nextElementSibling;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  initCopyCode();</span><br><span class="line">&#125;(window, document);</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>theme/next/source/css/_custom/custom.styl</code> 样式中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//代码块复制按钮</span><br><span class="line">.highlight&#123;</span><br><span class="line">  //方便copy代码按钮（btn-copy）的定位</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.btn-copy &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    background-color: #eee;</span><br><span class="line">    background-image: linear-gradient(#fcfcfc,#eee);</span><br><span class="line">    border: 1px solid #d5d5d5;</span><br><span class="line">    border-radius: 3px;</span><br><span class="line">    -webkit-user-select: none;</span><br><span class="line">    -moz-user-select: none;</span><br><span class="line">    -ms-user-select: none;</span><br><span class="line">    user-select: none;</span><br><span class="line">    -webkit-appearance: none;</span><br><span class="line">    font-size: 13px;</span><br><span class="line">    font-weight: 700;</span><br><span class="line">    line-height: 20px;</span><br><span class="line">    color: #333;</span><br><span class="line">    -webkit-transition: opacity .3s ease-in-out;</span><br><span class="line">    -o-transition: opacity .3s ease-in-out;</span><br><span class="line">    transition: opacity .3s ease-in-out;</span><br><span class="line">    padding: 2px 6px;</span><br><span class="line">    position: absolute;</span><br><span class="line">    right: 5px;</span><br><span class="line">    top: 5px;</span><br><span class="line">    opacity: 0;</span><br><span class="line">&#125;</span><br><span class="line">.btn-copy span &#123;</span><br><span class="line">    margin-left: 5px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight:hover .btn-copy&#123;</span><br><span class="line">  opacity: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>themes/next/layout/_layout.swig</code> 文件中引用（<code>/body</code>）之前添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 代码块复制功能 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clipboard.min.js&quot;&gt;&lt;/script&gt;  </span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clipboard-use.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -514,8 +530,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/01/windows上mysql安装/" rel="next" title="windows上mysql安装">
-                <i class="fa fa-chevron-left"></i> windows上mysql安装
+              <a href="/2019/10/01/右键创建md文档/" rel="next" title="右键创建md文档">
+                <i class="fa fa-chevron-left"></i> 右键创建md文档
               </a>
             
           </div>
@@ -603,7 +619,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -614,7 +630,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -625,7 +641,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -658,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#博客搭建"><span class="nav-number">1.</span> <span class="nav-text">博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化博客"><span class="nav-number">1.2.</span> <span class="nav-text">初始化博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载NEXT主题"><span class="nav-number">1.3.</span> <span class="nav-text">下载NEXT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启用nexT主题"><span class="nav-number">1.4.</span> <span class="nav-text">启用nexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT主题配置"><span class="nav-number">1.5.</span> <span class="nav-text">NexT主题配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建页面"><span class="nav-number">1.6.</span> <span class="nav-text">创建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">1.7.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找功能"><span class="nav-number">1.8.</span> <span class="nav-text">查找功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字和阅读时间统计功能"><span class="nav-number">1.9.</span> <span class="nav-text">文字和阅读时间统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爱心点击功能"><span class="nav-number">1.10.</span> <span class="nav-text">爱心点击功能</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#博客搭建"><span class="nav-number">1.</span> <span class="nav-text">博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化博客"><span class="nav-number">1.2.</span> <span class="nav-text">初始化博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载NEXT主题"><span class="nav-number">1.3.</span> <span class="nav-text">下载NEXT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启用nexT主题"><span class="nav-number">1.4.</span> <span class="nav-text">启用nexT主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT主题配置"><span class="nav-number">1.5.</span> <span class="nav-text">NexT主题配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建页面"><span class="nav-number">1.6.</span> <span class="nav-text">创建页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">1.7.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找功能"><span class="nav-number">1.8.</span> <span class="nav-text">查找功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字和阅读时间统计功能"><span class="nav-number">1.9.</span> <span class="nav-text">文字和阅读时间统计功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爱心点击功能"><span class="nav-number">1.10.</span> <span class="nav-text">爱心点击功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#看板娘"><span class="nav-number">1.11.</span> <span class="nav-text">看板娘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制功能"><span class="nav-number">1.12.</span> <span class="nav-text">复制功能</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -687,6 +703,7 @@
   
 </div>
 
+<!--
 
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
@@ -698,6 +715,7 @@
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
+-->
 
 
 
@@ -1197,3 +1215,6 @@
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/clicklove.js"></script>
+<!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
