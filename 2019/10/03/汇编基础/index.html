@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="汇编基础汇编基础简介以16位8086CPU为基础进行拓展。 机器语言是机器指令的集合，汇编语言的主体是汇编指令，汇编指令是机器指令的助记符，同机器指令一一对应 每一种CPU都有自己的汇编指令集，编译器将汇编语言编译为机器码 汇编语言指令分类 123汇编指令：机器码的助记符，有对应的机器码。伪指令：没有对应的机器码，由编译器执行，计算机并不执行。 其他符号：如：+、-、*、/等，由编译器识别，没有对">
+<meta name="description" content="汇编基础汇编基础简介以16位8086CPU为基础进行拓展。 机器语言是机器指令的集合，汇编语言的主体是汇编指令，汇编指令是机器指令的助记符，同机器指令一一对应 每一种CPU都有自己的汇编指令集，编译器将汇编语言编译为机器码 汇编指令一般格式：[标号：]指令助记符[操作数表] 汇编语言指令分类 123汇编指令：机器码的助记符，有对应的机器码。伪指令：没有对应的机器码，由编译器执行，计算机并不执行。">
 <meta name="keywords" content="汇编">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编基础">
 <meta property="og:url" content="http://yoursite.com/2019/10/03/汇编基础/index.html">
 <meta property="og:site_name" content="doudouQAQ">
-<meta property="og:description" content="汇编基础汇编基础简介以16位8086CPU为基础进行拓展。 机器语言是机器指令的集合，汇编语言的主体是汇编指令，汇编指令是机器指令的助记符，同机器指令一一对应 每一种CPU都有自己的汇编指令集，编译器将汇编语言编译为机器码 汇编语言指令分类 123汇编指令：机器码的助记符，有对应的机器码。伪指令：没有对应的机器码，由编译器执行，计算机并不执行。 其他符号：如：+、-、*、/等，由编译器识别，没有对">
+<meta property="og:description" content="汇编基础汇编基础简介以16位8086CPU为基础进行拓展。 机器语言是机器指令的集合，汇编语言的主体是汇编指令，汇编指令是机器指令的助记符，同机器指令一一对应 每一种CPU都有自己的汇编指令集，编译器将汇编语言编译为机器码 汇编指令一般格式：[标号：]指令助记符[操作数表] 汇编语言指令分类 123汇编指令：机器码的助记符，有对应的机器码。伪指令：没有对应的机器码，由编译器执行，计算机并不执行。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/10/03/汇编基础/Snipaste_2019-10-04_10-46-01.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/03/汇编基础/Snipaste_2019-10-04_11-23-30.png">
 <meta property="og:image" content="http://yoursite.com/2019/10/03/汇编基础/Snipaste_2019-10-04_16-34-43.png">
-<meta property="og:updated_time" content="2019-10-04T08:56:23.842Z">
+<meta property="og:updated_time" content="2019-10-05T03:40:52.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="汇编基础">
-<meta name="twitter:description" content="汇编基础汇编基础简介以16位8086CPU为基础进行拓展。 机器语言是机器指令的集合，汇编语言的主体是汇编指令，汇编指令是机器指令的助记符，同机器指令一一对应 每一种CPU都有自己的汇编指令集，编译器将汇编语言编译为机器码 汇编语言指令分类 123汇编指令：机器码的助记符，有对应的机器码。伪指令：没有对应的机器码，由编译器执行，计算机并不执行。 其他符号：如：+、-、*、/等，由编译器识别，没有对">
+<meta name="twitter:description" content="汇编基础汇编基础简介以16位8086CPU为基础进行拓展。 机器语言是机器指令的集合，汇编语言的主体是汇编指令，汇编指令是机器指令的助记符，同机器指令一一对应 每一种CPU都有自己的汇编指令集，编译器将汇编语言编译为机器码 汇编指令一般格式：[标号：]指令助记符[操作数表] 汇编语言指令分类 123汇编指令：机器码的助记符，有对应的机器码。伪指令：没有对应的机器码，由编译器执行，计算机并不执行。">
 <meta name="twitter:image" content="http://yoursite.com/2019/10/03/汇编基础/Snipaste_2019-10-04_10-46-01.png">
 
 
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.8k 字
+                  2.5k 字
                 </span>
               
 
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6 min
+                  9 min
                 </span>
               
             </div>
@@ -412,6 +412,7 @@
         <h1 id="汇编基础"><a href="#汇编基础" class="headerlink" title="汇编基础"></a>汇编基础</h1><h2 id="汇编基础简介"><a href="#汇编基础简介" class="headerlink" title="汇编基础简介"></a>汇编基础简介</h2><p>以16位8086CPU为基础进行拓展。</p>
 <p>机器语言是机器指令的集合，汇编语言的主体是汇编指令，汇编指令是机器指令的助记符，同机器指令一一对应</p>
 <p>每一种CPU都有自己的汇编指令集，编译器将汇编语言编译为机器码</p>
+<p>汇编指令一般格式：<code>[标号：]指令助记符[操作数表]</code></p>
 <p>汇编语言指令分类</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">汇编指令：机器码的助记符，有对应的机器码。</span><br><span class="line">伪指令：没有对应的机器码，由编译器执行，计算机并不执行。 </span><br><span class="line">其他符号：如：+、-、*、/等，由编译器识别，没有对应的机器码。</span><br></pre></td></tr></table></figure>
 
@@ -447,42 +448,42 @@
 
 <p>CS代码段寄存器和IP指令指针寄存器</p>
 <p>设CS内容为M，IP内容为N，CPU将从内存M*16+N单元开始，读取一条指令并执行。</p>
-<p>[address]表示一个偏移地址位address的内存单元。</p>
+<p>[ADDress]表示一个偏移地址位ADDress的内存单元。</p>
 <p>在CPU中，程序员能狗用指令读写的部件只有寄存器，可以通过更改CS，IP的内容控制CPU执行目标命令（转移指令）</p>
 <p><img src="Snipaste_2019-10-04_11-23-30.png" alt="2"></p>
 <p>字单元，即存放一个字型数据(16位)的内存单元，由两个地连续的内存单元组成。高地址内存单元中存放字型数据的高位字节，低地址内存单元中放字型数据的低位字节（高对高低对低）。</p>
 <p>DS寄存器存放要访问数据的段地址</p>
-<p>MOV指令的几种形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mov 寄存器,数据 mov ax,8</span><br><span class="line">mov 寄存器,寄存器 mov ax,bx</span><br><span class="line">mov 寄存器,内存单元 mov ax,[0]</span><br><span class="line">mov 内存单元,寄存器 mov [0],ax</span><br><span class="line">mov 段寄存器,寄存器 mov ds,ax</span><br></pre></td></tr></table></figure>
+<h4 id="MOV指令的几种形式"><a href="#MOV指令的几种形式" class="headerlink" title="MOV指令的几种形式"></a>MOV指令的几种形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MOV DEST，SRC</span><br><span class="line">DEST&lt;-SRC</span><br><span class="line">MOV 寄存器,数据 MOV AX,8</span><br><span class="line">MOV 寄存器,寄存器 MOV AX,BX</span><br><span class="line">MOV 寄存器,内存单元 MOV AX,[0]</span><br><span class="line">MOV 内存单元,寄存器 MOV [0],AX</span><br><span class="line">MOV 段寄存器,寄存器 MOV ds,AX</span><br></pre></td></tr></table></figure>
 
-<p>ADD指令的几种形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">add 寄存器,数据 add ax,8</span><br><span class="line">add 寄存器,寄存器 add ax,bx</span><br><span class="line">add 寄存器,内存单元 add ax,[0]</span><br><span class="line">add 内存单元,寄存器 add [0],ax</span><br></pre></td></tr></table></figure>
+<h4 id="ADD指令的几种形式"><a href="#ADD指令的几种形式" class="headerlink" title="ADD指令的几种形式"></a>ADD指令的几种形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ADD DEST，SRC</span><br><span class="line">DEST&lt;-DEST+SRC</span><br><span class="line">ADD 寄存器,数据 ADD AX,8</span><br><span class="line">ADD 寄存器,寄存器 ADD AX,BX</span><br><span class="line">ADD 寄存器,内存单元 ADD AX,[0]</span><br><span class="line">ADD 内存单元,寄存器 ADD [0],AX</span><br></pre></td></tr></table></figure>
 
-<p>SUB指令的几种形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sub 寄存器,数据 sub ax,8</span><br><span class="line">sub 寄存器,寄存器 sub ax,bx</span><br><span class="line">sub 寄存器,内存单元 sub ax,[0]</span><br><span class="line">sub 内存单元,寄存器 sub [0],ax</span><br></pre></td></tr></table></figure>
+<h4 id="INC指令"><a href="#INC指令" class="headerlink" title="INC指令"></a>INC指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INC DEST</span><br><span class="line">DEST&lt;-DEST+1</span><br><span class="line">INC 寄存器</span><br><span class="line">INC 内存单元</span><br></pre></td></tr></table></figure>
+
+<h4 id="DEC指令"><a href="#DEC指令" class="headerlink" title="DEC指令"></a>DEC指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DEC DEST</span><br><span class="line">DEST&lt;-DEST-1</span><br><span class="line">DEC 寄存器</span><br><span class="line">DEC 内存单元</span><br></pre></td></tr></table></figure>
+
+<h4 id="SUB指令的几种形式"><a href="#SUB指令的几种形式" class="headerlink" title="SUB指令的几种形式"></a>SUB指令的几种形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SUB DEST，SRC</span><br><span class="line">DEST&lt;-DEST-SRC</span><br><span class="line">SUB 寄存器,数据 SUB AX,8</span><br><span class="line">SUB 寄存器,寄存器 SUB AX,BX</span><br><span class="line">SUB 寄存器,内存单元 SUB AX,[0]</span><br><span class="line">SUB 内存单元,寄存器 SUB [0],AX</span><br></pre></td></tr></table></figure>
+
+<p>XCHG的操作数可以是通用寄存器或存储单元，但不能同时时存储单元，也不能有立即数。</p>
+<h4 id="XCHG指令的几种形式"><a href="#XCHG指令的几种形式" class="headerlink" title="XCHG指令的几种形式"></a>XCHG指令的几种形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">XCHG OPRD1,OPRD2</span><br><span class="line">OPRD1&lt;-&gt;OPRD2</span><br><span class="line">XCHG 寄存器,寄存器</span><br><span class="line">XCHG 寄存器,内存单元</span><br></pre></td></tr></table></figure>
 
 <p>8086CPU提供入栈和出栈指令。</p>
 <p>PUSH（入栈）和POP（出栈）</p>
-<p>PUSH指令的几种形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">push 寄存器</span><br><span class="line">push 段寄存器</span><br><span class="line">push 内存单元</span><br></pre></td></tr></table></figure>
+<h4 id="PUSH指令的几种形式"><a href="#PUSH指令的几种形式" class="headerlink" title="PUSH指令的几种形式"></a>PUSH指令的几种形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PUSH 寄存器</span><br><span class="line">PUSH 段寄存器</span><br><span class="line">PUSH 内存单元</span><br></pre></td></tr></table></figure>
 
-<p>POP指令的几种形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pop 寄存器</span><br><span class="line">pop 段寄存器</span><br><span class="line">pop 内存单元</span><br></pre></td></tr></table></figure>
+<h4 id="POP指令的几种形式"><a href="#POP指令的几种形式" class="headerlink" title="POP指令的几种形式"></a>POP指令的几种形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">POP 寄存器</span><br><span class="line">POP 段寄存器</span><br><span class="line">POP 内存单元</span><br></pre></td></tr></table></figure>
 
 <p>段寄存器SS和栈顶指针寄存器SP（ESP），任意时刻SS:SP指向栈顶元素。8086CPU中，入栈是，栈顶从高地址向低地址方向增长。</p>
 <p>LOOP指令</p>
 <p>CPU在执行loop操作有两个步骤</p>
 <ul>
-<li>（cx）=（cx）-1</li>
-<li>判断cx的值，不为零则跳转到标号，为令则继续向下运行</li>
+<li>（CX）=（CX）-1</li>
+<li>判断CX的值，不为零则跳转到标号，为令则继续向下运行</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mov cx,循环次数</span><br><span class="line">s:</span><br><span class="line">	循环执行的程序段</span><br><span class="line">	loop s</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MOV CX,循环次数</span><br><span class="line">s:</span><br><span class="line">	循环执行的程序段</span><br><span class="line">	loop s</span><br></pre></td></tr></table></figure>
 
-<p>AND指令的几种形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">and 寄存器,数据 and al,00100011B</span><br><span class="line">and 寄存器,寄存器 and al,bl</span><br><span class="line">and 寄存器,内存单元 and al,[0]</span><br><span class="line">and 内存单元,寄存器 and [0],al</span><br></pre></td></tr></table></figure>
+<h4 id="AND指令的几种形式"><a href="#AND指令的几种形式" class="headerlink" title="AND指令的几种形式"></a>AND指令的几种形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AND 寄存器,数据 AND al,00100011B</span><br><span class="line">AND 寄存器,寄存器 AND al,bl</span><br><span class="line">AND 寄存器,内存单元 AND al,[0]</span><br><span class="line">AND 内存单元,寄存器 AND [0],al</span><br></pre></td></tr></table></figure>
 
-<p>OR指令的几种形式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">or 寄存器,数据 or al,00100011B</span><br><span class="line">or 寄存器,寄存器 or al,bl</span><br><span class="line">or 寄存器,内存单元 or al,[0]</span><br><span class="line">or 内存单元,寄存器 or [0],al</span><br></pre></td></tr></table></figure>
+<h4 id="OR指令的几种形式"><a href="#OR指令的几种形式" class="headerlink" title="OR指令的几种形式"></a>OR指令的几种形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">OR 寄存器,数据 OR al,00100011B</span><br><span class="line">OR 寄存器,寄存器 OR al,bl</span><br><span class="line">OR 寄存器,内存单元 OR al,[0]</span><br><span class="line">OR 内存单元,寄存器 OR [0],al</span><br></pre></td></tr></table></figure>
 
 <p>定位内存地址的方法</p>
 <p><img src="Snipaste_2019-10-04_16-34-43.png" alt></p>
@@ -494,18 +495,17 @@
 <li>寄存器</li>
 <li>段地址（SA）和偏移地址（EA）</li>
 </ul>
-<p>DIV指令</p>
-<p>除数：8位或16位，在寄存器或内存单元中</p>
+<h4 id="DIV指令"><a href="#DIV指令" class="headerlink" title="DIV指令"></a>DIV指令</h4><p>除数：8位或16位，在寄存器或内存单元中</p>
 <p>被除数：（默认）放在 AX（16位）或 DX和AX（32位）中。</p>
 <p>如果除数是8位，则AL存储商，AH储存余数，如果除数是16位，AX储存商，DX储存余数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">186A1/100</span><br><span class="line">mov dx,1H ;高十六位</span><br><span class="line">mov ax,86A1H</span><br><span class="line">mov bx,100</span><br><span class="line">div bx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">186A1/100</span><br><span class="line">MOV DX,1H ;高十六位</span><br><span class="line">MOV AX,86A1H</span><br><span class="line">MOV BX,100</span><br><span class="line">DIV BX</span><br></pre></td></tr></table></figure>
 
 <h2 id="转移指令"><a href="#转移指令" class="headerlink" title="转移指令"></a>转移指令</h2><p>可以修改IP，或同时修改CS和IP的指令统称为转移指令</p>
 <p>8086CPU的转移指令行为分类</p>
 <ul>
-<li><p>只修改IP时，称为段内转移，如：jmp ax</p>
+<li><p>只修改IP时，称为段内转移，如：JMP AX</p>
 </li>
-<li><p>同时修改CS和IP时，称为段间转移，如jmp 1000:0</p>
+<li><p>同时修改CS和IP时，称为段间转移，如JMP 1000:0</p>
 </li>
 </ul>
 <p>8086CPU的转移指令对IP修改范围分类</p>
@@ -524,17 +524,204 @@
 <li>中断</li>
 </ul>
 <p>操作符offset在汇编语言中是由编译器处理的符号，它的功能是取得标号的偏移地址。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start:mov ax,offset start相当于mov ax,0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start:MOV AX,offset start相当于MOV AX,0</span><br></pre></td></tr></table></figure>
 
-<p>JMP指令</p>
-<p>jmp为无条件转移指令，可以只修改ip，也可以同时修改CS和IP。</p>
-<p> jmp指令要给出两种信息：</p>
+<h4 id="JMP指令"><a href="#JMP指令" class="headerlink" title="JMP指令"></a>JMP指令</h4><p>JMP为无条件转移指令，可以只修改ip，也可以同时修改CS和IP。</p>
+<p> JMP指令要给出两种信息：</p>
 <ul>
-<li><p>转移的H的地址</p>
-</li>
-<li><p>转移的距离(段间转移、段内短转移，段内近转移)</p>
-</li>
+<li>转移的H的地址</li>
+<li>转移的距离(段间转移、段内短转移，段内近转移)</li>
 </ul>
+<h4 id="条件转移指令JCC-LABEL"><a href="#条件转移指令JCC-LABEL" class="headerlink" title="条件转移指令JCC LABEL"></a>条件转移指令JCC LABEL</h4><p>单个标志条件</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>英文</th>
+<th>含义</th>
+<th>格式</th>
+<th>测试条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JZ/JE</td>
+<td>jump if zero/equal</td>
+<td>结果为零/相等则转移</td>
+<td>JZ/JE OPR</td>
+<td>ZF=1</td>
+</tr>
+<tr>
+<td>JNZ/JNE</td>
+<td>jump if not zero/equal</td>
+<td>结果不为零/不相等则转移</td>
+<td>JNZ/JNE OPR</td>
+<td>ZF=0</td>
+</tr>
+<tr>
+<td>JS</td>
+<td>jump if sign</td>
+<td>结果为负则转移</td>
+<td>JS OPR</td>
+<td>SF=1</td>
+</tr>
+<tr>
+<td>JNS</td>
+<td>jump if not sign</td>
+<td>结果为正则转移</td>
+<td>JNS OPR</td>
+<td>SF=0</td>
+</tr>
+<tr>
+<td>JO</td>
+<td>jump if overflow</td>
+<td>溢出则转移</td>
+<td>JO OPR</td>
+<td>OF=1</td>
+</tr>
+<tr>
+<td>JNO</td>
+<td>jump if not overflow</td>
+<td>不溢出则转移</td>
+<td>JNO OPR</td>
+<td>OF=0</td>
+</tr>
+<tr>
+<td>JP/JPE</td>
+<td>jump if parity/parity even</td>
+<td>奇偶位为1则转移</td>
+<td>JP/JPE OPR</td>
+<td>PF=1</td>
+</tr>
+<tr>
+<td>JNP/JNPE</td>
+<td>jump if not parity/parity even</td>
+<td>奇偶位为0则转移</td>
+<td>JNP/JNPE OPR</td>
+<td>PF=0</td>
+</tr>
+<tr>
+<td>JB/JNAE/JC</td>
+<td>jump if below/not above、not equal/carry</td>
+<td>低于/不高于或不等于/进位为1则转移</td>
+<td>JB/JNAE/JC OPR</td>
+<td>CF=1</td>
+</tr>
+<tr>
+<td>JNB/JAE/JNC</td>
+<td>jump if not below/ above、equal/not carry</td>
+<td>不低于/高于或等于/进位为零则转移</td>
+<td>JNB/JAE/JNC OPR</td>
+<td>CF=0</td>
+</tr>
+</tbody></table>
+<p>比较两个无符号数</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>英文</th>
+<th>含义</th>
+<th>格式</th>
+<th>测试条件</th>
+<th>等价于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JB/JNAE/JC</td>
+<td>jump if below/not above、not equal/carry</td>
+<td>低于/不高于或不等于/进位为1则转移</td>
+<td>JB/JNAE/JC OPR</td>
+<td>CF=1</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>JNB/JAE/JNC</td>
+<td>jump if not below/ above、equal/not carry</td>
+<td>不低于/高于或等于/进位为零则转移</td>
+<td>JNB/JAE/JNC OPR</td>
+<td>CF=0</td>
+<td>≥</td>
+</tr>
+<tr>
+<td>JBE/JNA</td>
+<td>jump if below/equal、not above</td>
+<td>低于/等于、不高于则转移</td>
+<td>JBE/JNA OPR</td>
+<td>CF并ZF=1</td>
+<td>≤</td>
+</tr>
+<tr>
+<td>JNBE/JA</td>
+<td>jump if not below/not equal、above</td>
+<td>不低于/不等于、高于则转移</td>
+<td>JNBE/JA OPR</td>
+<td>CF并ZF=0</td>
+<td>&gt;</td>
+</tr>
+</tbody></table>
+<p>比较两个有符号数</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>英文</th>
+<th>含义</th>
+<th>格式</th>
+<th>测试条件</th>
+<th>等价于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>JL/JNGE</td>
+<td>jump if less、not greater/equal</td>
+<td>小于、不大于/不等于则转移</td>
+<td>JL/JNGE OPR</td>
+<td>SF异或CF=1</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>JNL/JGE</td>
+<td>jump if not less、greater/equal</td>
+<td>不小于、大于/等于则转移</td>
+<td>JNL/JGE OPR</td>
+<td>SF异或CF=0</td>
+<td>≥</td>
+</tr>
+<tr>
+<td>JLE/JNG</td>
+<td>jump if less/equal、not greater</td>
+<td>小于/等于、不大于则转移</td>
+<td>JLE/JNG OPR</td>
+<td>(SF异或CF)并ZF=1</td>
+<td>≤</td>
+</tr>
+<tr>
+<td>JNLE/JG</td>
+<td>jump if not less/not equal、 greater</td>
+<td>不小于/不等于、大于则转移</td>
+<td>JNLE/JG OPR</td>
+<td>(SF异或CF)并ZF=0</td>
+<td>&gt;</td>
+</tr>
+</tbody></table>
+<h2 id="标志寄存器"><a href="#标志寄存器" class="headerlink" title="标志寄存器"></a>标志寄存器</h2><h4 id="CF进位标志"><a href="#CF进位标志" class="headerlink" title="CF进位标志"></a>CF进位标志</h4><h4 id="ZF零标志"><a href="#ZF零标志" class="headerlink" title="ZF零标志"></a>ZF零标志</h4><h4 id="SF符号标志"><a href="#SF符号标志" class="headerlink" title="SF符号标志"></a>SF符号标志</h4><h4 id="OF溢出标志"><a href="#OF溢出标志" class="headerlink" title="OF溢出标志"></a>OF溢出标志</h4><h4 id="PF奇偶标志"><a href="#PF奇偶标志" class="headerlink" title="PF奇偶标志"></a>PF奇偶标志</h4><h4 id="AF辅助进位标志"><a href="#AF辅助进位标志" class="headerlink" title="AF辅助进位标志"></a>AF辅助进位标志</h4><h4 id="CLC指令"><a href="#CLC指令" class="headerlink" title="CLC指令"></a>CLC指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CLC</span><br><span class="line">CF&lt;-0</span><br></pre></td></tr></table></figure>
+
+<h4 id="STC指令"><a href="#STC指令" class="headerlink" title="STC指令"></a>STC指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STC</span><br><span class="line">CF&lt;-1</span><br></pre></td></tr></table></figure>
+
+<h4 id="CMC指令"><a href="#CMC指令" class="headerlink" title="CMC指令"></a>CMC指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CMC</span><br><span class="line">CF&lt;-!CF</span><br></pre></td></tr></table></figure>
+
+<h4 id="LAHF指令"><a href="#LAHF指令" class="headerlink" title="LAHF指令"></a>LAHF指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LAHF</span><br><span class="line">AH&lt;-EFLAGS低8位</span><br></pre></td></tr></table></figure>
+
+<h4 id="SAHF指令"><a href="#SAHF指令" class="headerlink" title="SAHF指令"></a>SAHF指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SAHF</span><br><span class="line">EFLAGS低8位&lt;-AH</span><br></pre></td></tr></table></figure>
+
+<h4 id="ADC指令"><a href="#ADC指令" class="headerlink" title="ADC指令"></a>ADC指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ADC DEST,SRC</span><br><span class="line">DEST&lt;-DEST+SRC+CF</span><br></pre></td></tr></table></figure>
+
+<h4 id="SBB指令"><a href="#SBB指令" class="headerlink" title="SBB指令"></a>SBB指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SBB DEST,SRC</span><br><span class="line">DEST&lt;-DEST-(SRC+CF)</span><br></pre></td></tr></table></figure>
+
+<h4 id="LEA指令"><a href="#LEA指令" class="headerlink" title="LEA指令"></a>LEA指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LEA REG,PORD</span><br><span class="line">把OPRD的有效地址传送到操作数REG，REG必须是寄存器</span><br></pre></td></tr></table></figure>
+
+<h4 id="CMP指令"><a href="#CMP指令" class="headerlink" title="CMP指令"></a>CMP指令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CMP DEST,SRC</span><br><span class="line">标志寄存器的状态&lt;-DEST-SRC</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -665,7 +852,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -676,7 +863,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -687,7 +874,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -720,7 +907,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#汇编基础"><span class="nav-number">1.</span> <span class="nav-text">汇编基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#汇编基础简介"><span class="nav-number">1.1.</span> <span class="nav-text">汇编基础简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寄存器"><span class="nav-number">1.2.</span> <span class="nav-text">寄存器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据处理"><span class="nav-number">1.3.</span> <span class="nav-text">数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转移指令"><span class="nav-number">1.4.</span> <span class="nav-text">转移指令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#汇编基础"><span class="nav-number">1.</span> <span class="nav-text">汇编基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#汇编基础简介"><span class="nav-number">1.1.</span> <span class="nav-text">汇编基础简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寄存器"><span class="nav-number">1.2.</span> <span class="nav-text">寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MOV指令的几种形式"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">MOV指令的几种形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ADD指令的几种形式"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">ADD指令的几种形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#INC指令"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">INC指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DEC指令"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">DEC指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SUB指令的几种形式"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">SUB指令的几种形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XCHG指令的几种形式"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">XCHG指令的几种形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PUSH指令的几种形式"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">PUSH指令的几种形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#POP指令的几种形式"><span class="nav-number">1.2.0.8.</span> <span class="nav-text">POP指令的几种形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AND指令的几种形式"><span class="nav-number">1.2.0.9.</span> <span class="nav-text">AND指令的几种形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OR指令的几种形式"><span class="nav-number">1.2.0.10.</span> <span class="nav-text">OR指令的几种形式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据处理"><span class="nav-number">1.3.</span> <span class="nav-text">数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DIV指令"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">DIV指令</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#转移指令"><span class="nav-number">1.4.</span> <span class="nav-text">转移指令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JMP指令"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">JMP指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件转移指令JCC-LABEL"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">条件转移指令JCC LABEL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标志寄存器"><span class="nav-number">1.5.</span> <span class="nav-text">标志寄存器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CF进位标志"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">CF进位标志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ZF零标志"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">ZF零标志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SF符号标志"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">SF符号标志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OF溢出标志"><span class="nav-number">1.5.0.4.</span> <span class="nav-text">OF溢出标志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PF奇偶标志"><span class="nav-number">1.5.0.5.</span> <span class="nav-text">PF奇偶标志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AF辅助进位标志"><span class="nav-number">1.5.0.6.</span> <span class="nav-text">AF辅助进位标志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CLC指令"><span class="nav-number">1.5.0.7.</span> <span class="nav-text">CLC指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#STC指令"><span class="nav-number">1.5.0.8.</span> <span class="nav-text">STC指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CMC指令"><span class="nav-number">1.5.0.9.</span> <span class="nav-text">CMC指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LAHF指令"><span class="nav-number">1.5.0.10.</span> <span class="nav-text">LAHF指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SAHF指令"><span class="nav-number">1.5.0.11.</span> <span class="nav-text">SAHF指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ADC指令"><span class="nav-number">1.5.0.12.</span> <span class="nav-text">ADC指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SBB指令"><span class="nav-number">1.5.0.13.</span> <span class="nav-text">SBB指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LEA指令"><span class="nav-number">1.5.0.14.</span> <span class="nav-text">LEA指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CMP指令"><span class="nav-number">1.5.0.15.</span> <span class="nav-text">CMP指令</span></a></li></ol></li></div>
             
 
           </div>
