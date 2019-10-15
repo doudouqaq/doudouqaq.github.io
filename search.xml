@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[百度搜索方法]]></title>
+    <url>%2F2019%2F10%2F15%2F%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[百度搜索方法以搜索base64为例 不加任何条件搜索结果如下 精准搜索“”（双引号），你需要搜索精准的内容，就需要这样。比如：“base64”。 排除搜索-（减号），就是排除的意思，比如搜文档，你不想要看某个文库的内容太，就可以这样。学习网站 -某个文库。 或者搜索or（或）：两个结果都可以出现。 站点内搜索site：只想搜某个网站的内容。 related：网站相关的结果。 模糊搜索星号：任何内容都能用 * 代替 标题搜索intitle：只搜标题。平常的内容都是全网全文搜索的，太多结果了。 文件类型搜索filetype：这样只搜某个文件格式。比如：base64教程 filetype:PDF]]></content>
+      <categories>
+        <category>技巧</category>
+      </categories>
+      <tags>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux目录结构及作用]]></title>
     <url>%2F2019%2F10%2F14%2Flinux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%8F%8A%E4%BD%9C%E7%94%A8%2F</url>
     <content type="text"><![CDATA[linux目录结构及作用 文件名 功能及作用 /bin 存放基础系统所需的最基础的命令（程序） binary，比如：ls、cp、mkdir等，功能和/usr/bin类似，这个目录中的文件都是可执行的，普通用户都可以使用的命令 /boot 存放系统的引导文件（类似于windows的C盘） /dev 存放必要的设备文件 device，比如：声卡、磁盘、/dev/null,/dev/zero /etc 系统程序和大部分应用程序的全局配置文件，比如：用户帐号及密码配置文件，/etc/opt：/opt对应的配置文件，/etc/X11：Xwindows系统配置文件，/etc/xml：XML配置文件 /home 使用者个人家目录，一般是一个独立的分区，比如：个人配置文件、个人环境变量等 /lib 系统程序库文件，bin和sbin所需的库文件 library /media 可拆卸的媒介挂载点，比如：CD-ROMs、移动硬盘、U盘，系统默认会挂载到这里来 /mnt 临时挂载文件系统，用于存放挂载储存设备的挂载目录的，比如：cdrom 等目录 /opt 可选的应用程序包，第三方程序安装处 /proc 显示系统状态文件 process，比如：进程（正在运行中的程序）信息及内核信息（cpu、硬盘分区、内存信息等）；/proc目录伪装的文件系统proc的挂载目录，proc并不是真正的文件系统 /root root用户的工作目录 /sbin 管理员专用程序，可执行文件 /tmp 系统的临时文件 temporary /usr 系统用户工具和程序，存放安装程序的目录 unix system resource资源，/usr/bin：非必须的普通用户可执行命令，/usr/sbin：非必须的可执行文件，/usr/lib： /usr/bin/ 和 /usr/sbin/的库文件，/usr/include：标准头文件，/usr/src：内核源码，内核程序源代码， /srv 存放一些服务启动之后需要提取的数据 /var 存放可以变化的文件 variable可变的，/var/cache：程序执行所产生的暂存文件，/var/lib：程序产生的数据文件，/var/ock：锁定程序或设备使用，/var/log：系统记录文件（日志），/var/run：执行的PID进程号，/var/spool：存放数据序列，如Mail，/var/www：预设网页放置处]]></content>
@@ -119,8 +130,8 @@
         <category>环境配置</category>
       </categories>
       <tags>
-        <tag>mysql</tag>
         <tag>linux</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
 </search>
