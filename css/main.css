@@ -1823,7 +1823,7 @@ header {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f288ff;
+  background: #47ff30;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2673,6 +2673,7 @@ header {
 }
 .content-wrap {
   float: right;
+  opacity: 0.8;
   box-sizing: border-box;
   padding: 40px;
   width: calc(100% - 260px);
