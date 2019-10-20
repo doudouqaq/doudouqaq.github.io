@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="python,语言,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="python基础菜鸟教程的总结 Python3 基础语法标识符 第一个字符必须是字母表中字母或下划线 _ 。 标识符的其他的部分由字母、数字和下划线组成。 标识符对大小写敏感。  python保留字123&amp;gt;&amp;gt;&amp;gt; import keyword&amp;gt;&amp;gt;&amp;gt; keyword.kwlist[&amp;apos;False&amp;apos;, &amp;apos;None&amp;apos;, &amp;apos;">
+<meta name="keywords" content="python,语言">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础">
+<meta property="og:url" content="http://yoursite.com/2019/10/19/python基础/index.html">
+<meta property="og:site_name" content="doudouQAQ">
+<meta property="og:description" content="python基础菜鸟教程的总结 Python3 基础语法标识符 第一个字符必须是字母表中字母或下划线 _ 。 标识符的其他的部分由字母、数字和下划线组成。 标识符对大小写敏感。  python保留字123&amp;gt;&amp;gt;&amp;gt; import keyword&amp;gt;&amp;gt;&amp;gt; keyword.kwlist[&amp;apos;False&amp;apos;, &amp;apos;None&amp;apos;, &amp;apos;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-20T14:13:21.751Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python基础">
+<meta name="twitter:description" content="python基础菜鸟教程的总结 Python3 基础语法标识符 第一个字符必须是字母表中字母或下划线 _ 。 标识符的其他的部分由字母、数字和下划线组成。 标识符对大小写敏感。  python保留字123&amp;gt;&amp;gt;&amp;gt; import keyword&amp;gt;&amp;gt;&amp;gt; keyword.kwlist[&amp;apos;False&amp;apos;, &amp;apos;None&amp;apos;, &amp;apos;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/19/python基础/">
+
+
+
+
+
+  <title>python基础 | doudouQAQ</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">doudouQAQ</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/19/python基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="doudou">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="doudouQAQ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-19T22:27:01+08:00">
+                2019-10-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5.4k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  21 min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h2><p>菜鸟教程的总结</p>
+<h2 id="Python3-基础语法"><a href="#Python3-基础语法" class="headerlink" title="Python3 基础语法"></a>Python3 基础语法</h2><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><ul>
+<li>第一个字符必须是字母表中字母或下划线 <strong>_</strong> 。</li>
+<li>标识符的其他的部分由字母、数字和下划线组成。</li>
+<li>标识符对大小写敏感。</li>
+</ul>
+<h3 id="python保留字"><a href="#python保留字" class="headerlink" title="python保留字"></a>python保留字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import keyword</span><br><span class="line">&gt;&gt;&gt; keyword.kwlist</span><br><span class="line">[&apos;False&apos;, &apos;None&apos;, &apos;True&apos;, &apos;and&apos;, &apos;as&apos;, &apos;assert&apos;, &apos;break&apos;, &apos;class&apos;, &apos;continue&apos;, &apos;def&apos;, &apos;del&apos;, &apos;elif&apos;, &apos;else&apos;, &apos;except&apos;, &apos;finally&apos;, &apos;for&apos;, &apos;from&apos;, &apos;global&apos;, &apos;if&apos;, &apos;import&apos;, &apos;in&apos;, &apos;is&apos;, &apos;lambda&apos;, &apos;nonlocal&apos;, &apos;not&apos;, &apos;or&apos;, &apos;pass&apos;, &apos;raise&apos;, &apos;return&apos;, &apos;try&apos;, &apos;while&apos;, &apos;with&apos;, &apos;yield&apos;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p><code>#</code>单行注释</p>
+<p><code>&#39;&#39;&#39;</code>和<code>“”“</code>多行注释</p>
+<h3 id="行与缩进"><a href="#行与缩进" class="headerlink" title="行与缩进"></a>行与缩进</h3><p>缩进的空格数是可变的，但是同一个代码块的语句必须包含相同的缩进空格数。</p>
+<h3 id="多行语句"><a href="#多行语句" class="headerlink" title="多行语句"></a>多行语句</h3><p>Python 通常是一行写完一条语句，但如果语句很长，可以使用反斜杠(\)来实现多行语句。</p>
+<h3 id="标准数据类型"><a href="#标准数据类型" class="headerlink" title="标准数据类型"></a>标准数据类型</h3><p>Python3 中有六个标准的数据类型：</p>
+<ul>
+<li>Number（数字）</li>
+<li>String（字符串）</li>
+<li>List（列表）</li>
+<li>Tuple（元组）</li>
+<li>Set（集合）</li>
+<li>Dictionary（字典）</li>
+</ul>
+<p>Python3 的六个标准数据类型中：</p>
+<ul>
+<li><strong>不可变数据（3 个）：</strong>Number（数字）、String（字符串）、Tuple（元组）；</li>
+<li><strong>可变数据（3 个）：</strong>List（列表）、Dictionary（字典）、Set（集合）。</li>
+</ul>
+<h3 id="Python数据类型转换"><a href="#Python数据类型转换" class="headerlink" title="Python数据类型转换"></a>Python数据类型转换</h3><table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-int.html" target="_blank" rel="noopener">int(x [,base])</a></td>
+<td align="left">将x转换为一个整数</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-float.html" target="_blank" rel="noopener">float(x)</a></td>
+<td align="left">将x转换到一个浮点数</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-complex.html" target="_blank" rel="noopener">complex(real [,imag])</a></td>
+<td align="left">创建一个复数</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-str.html" target="_blank" rel="noopener">str(x)</a></td>
+<td align="left">将对象 x 转换为字符串</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-repr.html" target="_blank" rel="noopener">repr(x)</a></td>
+<td align="left">将对象 x 转换为表达式字符串</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-eval.html" target="_blank" rel="noopener">eval(str)</a></td>
+<td align="left">用来计算在字符串中的有效Python表达式,并返回一个对象</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-tuple.html" target="_blank" rel="noopener">tuple(s)</a></td>
+<td align="left">将序列 s 转换为一个元组</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-list.html" target="_blank" rel="noopener">list(s)</a></td>
+<td align="left">将序列 s 转换为一个列表</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-set.html" target="_blank" rel="noopener">set(s)</a></td>
+<td align="left">转换为可变集合</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-dict.html" target="_blank" rel="noopener">dict(d)</a></td>
+<td align="left">创建一个字典。d 必须是一个 (key, value)元组序列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-frozenset.html" target="_blank" rel="noopener">frozenset(s)</a></td>
+<td align="left">转换为不可变集合</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-chr.html" target="_blank" rel="noopener">chr(x)</a></td>
+<td align="left">将一个整数转换为一个字符</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-ord.html" target="_blank" rel="noopener">ord(x)</a></td>
+<td align="left">将一个字符转换为它的整数值</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-hex.html" target="_blank" rel="noopener">hex(x)</a></td>
+<td align="left">将一个整数转换为一个十六进制字符串</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python-func-oct.html" target="_blank" rel="noopener">oct(x)</a></td>
+<td align="left">将一个整数转换为一个八进制字符串</td>
+</tr>
+</tbody></table>
+<h2 id="数字-Number-类型"><a href="#数字-Number-类型" class="headerlink" title="数字(Number)类型"></a>数字(Number)类型</h2><p>python中数字有四种类型：整数、布尔型、浮点数和复数。</p>
+<p>内置的 type() 函数可以用来查询变量所指的对象类型，此外还可以用 isinstance 来判断。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">a=100 </span><br><span class="line">print(type(a)) &lt;class &apos;int&apos;&gt;</span><br><span class="line">isinstance(a, int) True</span><br><span class="line">isinstance 和 type 的区别在于：</span><br><span class="line">	type()不会认为子类是一种父类类型。</span><br><span class="line">	isinstance()会认为子类是一种父类类型。</span><br><span class="line">&gt;&gt;&gt; class A:</span><br><span class="line">...     pass</span><br><span class="line">... </span><br><span class="line">&gt;&gt;&gt; class B(A):</span><br><span class="line">...     pass</span><br><span class="line">... </span><br><span class="line">&gt;&gt;&gt; isinstance(A(), A)</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; type(A()) == A </span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; isinstance(B(), A)</span><br><span class="line">True</span><br><span class="line">&gt;&gt;&gt; type(B()) == A</span><br><span class="line">False</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>int</strong> (整数), 如 1, 只有一种整数类型 int，表示为长整型，没有 python2 中的 Long。</li>
+<li><strong>bool</strong> (布尔), 如 True。</li>
+<li><strong>float</strong> (浮点数), 如 1.23、3E-2</li>
+<li><strong>complex</strong> (复数), 如 1 + 2j、 1.1 + 2.2j</li>
+</ul>
+<p>可以使用del语句删除一些对象引用。</p>
+<h3 id="Python算术运算符"><a href="#Python算术运算符" class="headerlink" title="Python算术运算符"></a>Python算术运算符</h3><p>以下假设变量a为10，变量b为21：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td align="left">加 - 两个对象相加</td>
+<td align="left">a + b 输出结果 31</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">减 - 得到负数或是一个数减去另一个数</td>
+<td align="left">a - b 输出结果 -11</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">乘 - 两个数相乘或是返回一个被重复若干次的字符串</td>
+<td align="left">a * b 输出结果 210</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="left">除 - x 除以 y</td>
+<td align="left">b / a 输出结果 2.1</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">取模 - 返回除法的余数</td>
+<td align="left">b % a 输出结果 1</td>
+</tr>
+<tr>
+<td align="left">**</td>
+<td align="left">幂 - 返回x的y次幂</td>
+<td align="left">a**b 为10的21次方</td>
+</tr>
+<tr>
+<td align="left">//</td>
+<td align="left">取整除 - 向下取接近除数的整数</td>
+<td align="left">9//2=4  -9//2=-5</td>
+</tr>
+</tbody></table>
+<h3 id="Python比较运算符"><a href="#Python比较运算符" class="headerlink" title="Python比较运算符"></a>Python比较运算符</h3><p>以下假设变量a为10，变量b为20：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">==</td>
+<td align="left">等于 - 比较对象是否相等</td>
+<td align="left">(a == b) 返回 False。</td>
+</tr>
+<tr>
+<td align="left">!=</td>
+<td align="left">不等于 - 比较两个对象是否不相等</td>
+<td align="left">(a != b) 返回 True。</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">大于 - 返回x是否大于y</td>
+<td align="left">(a &gt; b) 返回 False。</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">小于 - 返回x是否小于y。所有比较运算符返回1表示真，返回0表示假。这分别与特殊的变量True和False等价。注意，这些变量名的大写。</td>
+<td align="left">(a &lt; b) 返回 True。</td>
+</tr>
+<tr>
+<td align="left">&gt;=</td>
+<td align="left">大于等于 - 返回x是否大于等于y。</td>
+<td align="left">(a &gt;= b) 返回 False。</td>
+</tr>
+<tr>
+<td align="left">&lt;=</td>
+<td align="left">小于等于 - 返回x是否小于等于y。</td>
+<td align="left">(a &lt;= b) 返回 True。</td>
+</tr>
+</tbody></table>
+<h3 id="Python赋值运算符"><a href="#Python赋值运算符" class="headerlink" title="Python赋值运算符"></a>Python赋值运算符</h3><p>以下假设变量a为10，变量b为20：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">=</td>
+<td align="left">简单的赋值运算符</td>
+<td align="left">c = a + b 将 a + b 的运算结果赋值为 c</td>
+</tr>
+<tr>
+<td align="left">+=</td>
+<td align="left">加法赋值运算符</td>
+<td align="left">c += a 等效于 c = c + a</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="left">减法赋值运算符</td>
+<td align="left">c -= a 等效于 c = c - a</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="left">乘法赋值运算符</td>
+<td align="left">c *= a 等效于 c = c * a</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="left">除法赋值运算符</td>
+<td align="left">c /= a 等效于 c = c / a</td>
+</tr>
+<tr>
+<td align="left">%=</td>
+<td align="left">取模赋值运算符</td>
+<td align="left">c %= a 等效于 c = c % a</td>
+</tr>
+<tr>
+<td align="left">**=</td>
+<td align="left">幂赋值运算符</td>
+<td align="left">c *<em>= a 等效于 c = c *</em> a</td>
+</tr>
+<tr>
+<td align="left">//=</td>
+<td align="left">取整除赋值运算符</td>
+<td align="left">c //= a 等效于 c = c // a</td>
+</tr>
+</tbody></table>
+<h3 id="Python位运算符"><a href="#Python位运算符" class="headerlink" title="Python位运算符"></a>Python位运算符</h3><p>按位运算符是把数字看作二进制来进行计算的。Python中的按位运算法则如下：</p>
+<p>下表中变量 a 为 60，b 为 13二进制格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = 0011 1100</span><br><span class="line"></span><br><span class="line">b = 0000 1101</span><br><span class="line"></span><br><span class="line">-----------------</span><br><span class="line"></span><br><span class="line">a&amp;b = 0000 1100</span><br><span class="line"></span><br><span class="line">a|b = 0011 1101</span><br><span class="line"></span><br><span class="line">a^b = 0011 0001</span><br><span class="line"></span><br><span class="line">~a  = 1100 0011</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&amp;</td>
+<td align="left">按位与运算符：参与运算的两个值,如果两个相应位都为1,则该位的结果为1,否则为0</td>
+<td align="left">(a &amp; b) 输出结果 12 ，二进制解释： 0000 1100</td>
+</tr>
+<tr>
+<td align="left">|</td>
+<td align="left">按位或运算符：只要对应的二个二进位有一个为1时，结果位就为1。</td>
+<td align="left">(a | b) 输出结果 61 ，二进制解释： 0011 1101</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">按位异或运算符：当两对应的二进位相异时，结果为1</td>
+<td align="left">(a ^ b) 输出结果 49 ，二进制解释： 0011 0001</td>
+</tr>
+<tr>
+<td align="left">~</td>
+<td align="left">按位取反运算符：对数据的每个二进制位取反,即把1变为0,把0变为1。<strong>~x</strong> 类似于 <strong>-x-1</strong></td>
+<td align="left">(~a ) 输出结果 -61 ，二进制解释： 1100 0011， 在一个有符号二进制数的补码形式。</td>
+</tr>
+<tr>
+<td align="left">&lt;&lt;</td>
+<td align="left">左移动运算符：运算数的各二进位全部左移若干位，由”&lt;&lt;”右边的数指定移动的位数，高位丢弃，低位补0。</td>
+<td align="left">a &lt;&lt; 2 输出结果 240 ，二进制解释： 1111 0000</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;</td>
+<td align="left">右移动运算符：把”&gt;&gt;”左边的运算数的各二进位全部右移若干位，”&gt;&gt;”右边的数指定移动的位数</td>
+<td align="left">a &gt;&gt; 2 输出结果 15 ，二进制解释： 0000 1111</td>
+</tr>
+</tbody></table>
+<h3 id="Python逻辑运算符"><a href="#Python逻辑运算符" class="headerlink" title="Python逻辑运算符"></a>Python逻辑运算符</h3><p>Python语言支持逻辑运算符，以下假设变量 a 为 10, b为 20:</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">逻辑表达式</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">and</td>
+<td align="left">x and y</td>
+<td align="left">布尔”与” - 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。</td>
+<td align="left">(a and b) 返回 20。</td>
+</tr>
+<tr>
+<td align="left">or</td>
+<td align="left">x or y</td>
+<td align="left">布尔”或” - 如果 x 是 True，它返回 x 的值，否则它返回 y 的计算值。</td>
+<td align="left">(a or b) 返回 10。</td>
+</tr>
+<tr>
+<td align="left">not</td>
+<td align="left">not x</td>
+<td align="left">布尔”非” - 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。</td>
+<td align="left">not(a and b) 返回 False</td>
+</tr>
+</tbody></table>
+<h3 id="Python成员运算符"><a href="#Python成员运算符" class="headerlink" title="Python成员运算符"></a>Python成员运算符</h3><p>除了以上的一些运算符之外，Python还支持成员运算符，测试实例中包含了一系列的成员，包括字符串，列表或元组。</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">in</td>
+<td align="left">如果在指定的序列中找到值返回 True，否则返回 False。</td>
+<td align="left">x 在 y 序列中 , 如果 x 在 y 序列中返回 True。</td>
+</tr>
+<tr>
+<td align="left">not in</td>
+<td align="left">如果在指定的序列中没有找到值返回 True，否则返回 False。</td>
+<td align="left">x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。</td>
+</tr>
+</tbody></table>
+<h3 id="Python身份运算符"><a href="#Python身份运算符" class="headerlink" title="Python身份运算符"></a>Python身份运算符</h3><p>身份运算符用于比较两个对象的存储单元</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">is</td>
+<td align="left">is 是判断两个标识符是不是引用自一个对象</td>
+<td align="left"><strong>x is y</strong>, 类似 <strong>id(x) == id(y)</strong> , 如果引用的是同一个对象则返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td align="left">is not</td>
+<td align="left">is not 是判断两个标识符是不是引用自不同对象</td>
+<td align="left"><strong>x is not y</strong> ， 类似 <strong>id(a) != id(b)</strong>。如果引用的不是同一个对象则返回结果 True，否则返回 False。</td>
+</tr>
+</tbody></table>
+<h3 id="Python运算符优先级"><a href="#Python运算符优先级" class="headerlink" title="Python运算符优先级"></a>Python运算符优先级</h3><p>以下表格列出了从最高到最低优先级的所有运算符：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">**</td>
+<td align="left">指数 (最高优先级)</td>
+</tr>
+<tr>
+<td align="left">~ + -</td>
+<td align="left">按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)</td>
+</tr>
+<tr>
+<td align="left">* / % //</td>
+<td align="left">乘，除，取模和取整除</td>
+</tr>
+<tr>
+<td align="left">+ -</td>
+<td align="left">加法减法</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt; &lt;&lt;</td>
+<td align="left">右移，左移运算符</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">位 ‘AND’</td>
+</tr>
+<tr>
+<td align="left">^ |</td>
+<td align="left">位运算符</td>
+</tr>
+<tr>
+<td align="left">&lt;= &lt; &gt; &gt;=</td>
+<td align="left">比较运算符</td>
+</tr>
+<tr>
+<td align="left">&lt;&gt; == !=</td>
+<td align="left">等于运算符</td>
+</tr>
+<tr>
+<td align="left">= %= /= //= -= += <em>= *</em>=</td>
+<td align="left">赋值运算符</td>
+</tr>
+<tr>
+<td align="left">is is not</td>
+<td align="left">身份运算符</td>
+</tr>
+<tr>
+<td align="left">in not in</td>
+<td align="left">成员运算符</td>
+</tr>
+<tr>
+<td align="left">not and or</td>
+<td align="left">逻辑运算符</td>
+</tr>
+</tbody></table>
+<h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">返回值 ( 描述 )</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-abs.html" target="_blank" rel="noopener">abs(x)</a></td>
+<td align="left">返回数字的绝对值，如abs(-10) 返回 10</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-ceil.html" target="_blank" rel="noopener">ceil(x)</a></td>
+<td align="left">返回数字的上入整数，如math.ceil(4.1) 返回 5</td>
+</tr>
+<tr>
+<td align="left">cmp(x, y)</td>
+<td align="left">如果 x &lt; y 返回 -1, 如果 x == y 返回 0, 如果 x &gt; y 返回 1。 <strong>Python 3 已废弃，使用 (x&gt;y)-(x&lt;y) 替换</strong>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-exp.html" target="_blank" rel="noopener">exp(x)</a></td>
+<td align="left">返回e的x次幂(ex),如math.exp(1) 返回2.718281828459045</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-fabs.html" target="_blank" rel="noopener">fabs(x)</a></td>
+<td align="left">返回数字的绝对值，如math.fabs(-10) 返回10.0</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-floor.html" target="_blank" rel="noopener">floor(x)</a></td>
+<td align="left">返回数字的下舍整数，如math.floor(4.9)返回 4</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-log.html" target="_blank" rel="noopener">log(x)</a></td>
+<td align="left">如math.log(math.e)返回1.0,math.log(100,10)返回2.0</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-log10.html" target="_blank" rel="noopener">log10(x)</a></td>
+<td align="left">返回以10为基数的x的对数，如math.log10(100)返回 2.0</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-max.html" target="_blank" rel="noopener">max(x1, x2,…)</a></td>
+<td align="left">返回给定参数的最大值，参数可以为序列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-min.html" target="_blank" rel="noopener">min(x1, x2,…)</a></td>
+<td align="left">返回给定参数的最小值，参数可以为序列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-modf.html" target="_blank" rel="noopener">modf(x)</a></td>
+<td align="left">返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-pow.html" target="_blank" rel="noopener">pow(x, y)</a></td>
+<td align="left">x**y 运算后的值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-round.html" target="_blank" rel="noopener">round(x [,n])</a></td>
+<td align="left">返回浮点数x的四舍五入值，如给出n值，则代表舍入到小数点后的位数。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-sqrt.html" target="_blank" rel="noopener">sqrt(x)</a></td>
+<td align="left">返回数字x的平方根。</td>
+</tr>
+</tbody></table>
+<h2 id="随机数函数"><a href="#随机数函数" class="headerlink" title="随机数函数"></a>随机数函数</h2><p>随机数可以用于数学，游戏，安全等领域中，还经常被嵌入到算法中，用以提高算法效率，并提高程序的安全性。</p>
+<p>Python包含以下常用随机数函数：</p>
+<table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-choice.html" target="_blank" rel="noopener">choice(seq)</a></td>
+<td align="left">从序列的元素中随机挑选一个元素，比如random.choice(range(10))，从0到9中随机挑选一个整数。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-randrange.html" target="_blank" rel="noopener">randrange ([start,] stop [,step])</a></td>
+<td align="left">从指定范围内，按指定基数递增的集合中获取一个随机数，基数默认值为 1</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-random.html" target="_blank" rel="noopener">random()</a></td>
+<td align="left">随机生成下一个实数，它在[0,1)范围内。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-seed.html" target="_blank" rel="noopener">seed([x])</a></td>
+<td align="left">改变随机数生成器的种子seed。如果你不了解其原理，你不必特别去设定seed，Python会帮你选择seed。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-shuffle.html" target="_blank" rel="noopener">shuffle(lst)</a></td>
+<td align="left">将序列的所有元素随机排序</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-uniform.html" target="_blank" rel="noopener">uniform(x, y)</a></td>
+<td align="left">随机生成下一个实数，它在[x,y]范围内。</td>
+</tr>
+</tbody></table>
+<h2 id="数学常量"><a href="#数学常量" class="headerlink" title="数学常量"></a>数学常量</h2><table>
+<thead>
+<tr>
+<th align="left">常量</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">pi</td>
+<td align="left">数学常量 pi（圆周率，一般以π来表示）</td>
+</tr>
+<tr>
+<td align="left">e</td>
+<td align="left">数学常量 e，e即自然常数（自然常数）。</td>
+</tr>
+</tbody></table>
+<h2 id="字符串-String"><a href="#字符串-String" class="headerlink" title="字符串(String)"></a>字符串(String)</h2><ul>
+<li>python中单引号和双引号使用完全相同。</li>
+<li>使用三引号(‘’’或”””)可以指定一个多行字符串。</li>
+<li>转义符 ‘&#39;</li>
+<li>反斜杠可以用来转义，使用r可以让反斜杠不发生转义。。 如 r”this is a line with \n” 则\n会显示，并不是换行。</li>
+<li>按字面意义级联字符串，如”this “ “is “ “string”会被自动转换为this is string。</li>
+<li>字符串可以用 + 运算符连接在一起，用 * 运算符重复。</li>
+<li>Python 中的字符串有两种索引方式，从左往右以 0 开始，从右往左以 -1 开始。</li>
+<li>Python中的字符串不能改变。</li>
+<li>Python 没有单独的字符类型，一个字符就是长度为 1 的字符串。</li>
+<li>字符串的截取的语法格式如下：<strong>变量[头下标:尾下标:步长]</strong></li>
+</ul>
+<h2 id="Python-的字符串内建函数"><a href="#Python-的字符串内建函数" class="headerlink" title="Python 的字符串内建函数"></a>Python 的字符串内建函数</h2><p>Python 的字符串常用内建函数如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法及描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-capitalize.html" target="_blank" rel="noopener">capitalize()</a> 将字符串的第一个字符转换为大写</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-center.html" target="_blank" rel="noopener">center(width, fillchar)</a> 返回一个指定的宽度 width 居中的字符串，fillchar 为填充的字符，默认为空格。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-count.html" target="_blank" rel="noopener">count(str, beg= 0,end=len(string))</a> 返回 str 在 string 里面出现的次数，如果 beg 或者 end 指定则返回指定范围内 str 出现的次数</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-decode.html" target="_blank" rel="noopener">bytes.decode(encoding=”utf-8”, errors=”strict”)</a> Python3 中没有 decode 方法，但我们可以使用 bytes 对象的 decode() 方法来解码给定的 bytes 对象，这个 bytes 对象可以由 str.encode() 来编码返回。</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-encode.html" target="_blank" rel="noopener">encode(encoding=’UTF-8’,errors=’strict’)</a> 以 encoding 指定的编码格式编码字符串，如果出错默认报一个ValueError 的异常，除非 errors 指定的是’ignore’或者’replace’</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-endswith.html" target="_blank" rel="noopener">endswith(suffix, beg=0, end=len(string))</a> 检查字符串是否以 obj 结束，如果beg 或者 end 指定则检查指定的范围内是否以 obj 结束，如果是，返回 True,否则返回 False.</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-expandtabs.html" target="_blank" rel="noopener">expandtabs(tabsize=8)</a> 把字符串 string 中的 tab 符号转为空格，tab 符号默认的空格数是 8 。</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-find.html" target="_blank" rel="noopener">find(str, beg=0, end=len(string))</a> 检测 str 是否包含在字符串中，如果指定范围 beg 和 end ，则检查是否包含在指定范围内，如果包含返回开始的索引值，否则返回-1</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-index.html" target="_blank" rel="noopener">index(str, beg=0, end=len(string))</a> 跟find()方法一样，只不过如果str不在字符串中会报一个异常.</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-isalnum.html" target="_blank" rel="noopener">isalnum()</a> 如果字符串至少有一个字符并且所有字符都是字母或数字则返 回 True,否则返回 False</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-isalpha.html" target="_blank" rel="noopener">isalpha()</a> 如果字符串至少有一个字符并且所有字符都是字母则返回 True, 否则返回 False</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-isdigit.html" target="_blank" rel="noopener">isdigit()</a> 如果字符串只包含数字则返回 True 否则返回 False..</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-islower.html" target="_blank" rel="noopener">islower()</a> 如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是小写，则返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-isnumeric.html" target="_blank" rel="noopener">isnumeric()</a> 如果字符串中只包含数字字符，则返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-isspace.html" target="_blank" rel="noopener">isspace()</a> 如果字符串中只包含空白，则返回 True，否则返回 False.</td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-istitle.html" target="_blank" rel="noopener">istitle()</a> 如果字符串是标题化的(见 title())则返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-isupper.html" target="_blank" rel="noopener">isupper()</a> 如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是大写，则返回 True，否则返回 False</td>
+</tr>
+<tr>
+<td align="left">18</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-join.html" target="_blank" rel="noopener">join(seq)</a> 以指定字符串作为分隔符，将 seq 中所有的元素(的字符串表示)合并为一个新的字符串</td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-len.html" target="_blank" rel="noopener">len(string)</a> 返回字符串长度</td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-ljust.html" target="_blank" rel="noopener">ljust(width[, fillchar])</a> 返回一个原字符串左对齐,并使用 fillchar 填充至长度 width 的新字符串，fillchar 默认为空格。</td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-lower.html" target="_blank" rel="noopener">lower()</a> 转换字符串中所有大写字符为小写.</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-lstrip.html" target="_blank" rel="noopener">lstrip()</a> 截掉字符串左边的空格或指定字符。</td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-maketrans.html" target="_blank" rel="noopener">maketrans()</a> 创建字符映射的转换表，对于接受两个参数的最简单的调用方式，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。</td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-max.html" target="_blank" rel="noopener">max(str)</a> 返回字符串 str 中最大的字母。</td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-min.html" target="_blank" rel="noopener">min(str)</a> 返回字符串 str 中最小的字母。</td>
+</tr>
+<tr>
+<td align="left">26</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-replace.html" target="_blank" rel="noopener">replace(old, new [, max])</a> 把 将字符串中的 str1 替换成 str2,如果 max 指定，则替换不超过 max 次。</td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-rfind.html" target="_blank" rel="noopener">rfind(str, beg=0,end=len(string))</a> 类似于 find()函数，不过是从右边开始查找.</td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-rindex.html" target="_blank" rel="noopener">rindex( str, beg=0, end=len(string))</a> 类似于 index()，不过是从右边开始.</td>
+</tr>
+<tr>
+<td align="left">29</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-rjust.html" target="_blank" rel="noopener">rjust(width,[, fillchar])</a> 返回一个原字符串右对齐,并使用fillchar(默认空格）填充至长度 width 的新字符串</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-rstrip.html" target="_blank" rel="noopener">rstrip()</a> 删除字符串字符串末尾的空格.</td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-split.html" target="_blank" rel="noopener">split(str=””, num=string.count(str))</a> num=string.count(str)) 以 str 为分隔符截取字符串，如果 num 有指定值，则仅截取 num+1 个子字符串</td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-splitlines.html" target="_blank" rel="noopener">splitlines([keepends])</a> 按照行(‘\r’, ‘\r\n’, \n’)分隔，返回一个包含各行作为元素的列表，如果参数 keepends 为 False，不包含换行符，如果为 True，则保留换行符。</td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-startswith.html" target="_blank" rel="noopener">startswith(substr, beg=0,end=len(string))</a> 检查字符串是否是以指定子字符串 substr 开头，是则返回 True，否则返回 False。如果beg 和 end 指定值，则在指定范围内检查。</td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-strip.html" target="_blank" rel="noopener">strip([chars])</a> 在字符串上执行 lstrip()和 rstrip()</td>
+</tr>
+<tr>
+<td align="left">35</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-swapcase.html" target="_blank" rel="noopener">swapcase()</a> 将字符串中大写转换为小写，小写转换为大写</td>
+</tr>
+<tr>
+<td align="left">36</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-title.html" target="_blank" rel="noopener">title()</a> 返回”标题化”的字符串,就是说所有单词都是以大写开始，其余字母均为小写(见 istitle())</td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-translate.html" target="_blank" rel="noopener">translate(table, deletechars=””)</a> 根据 str 给出的表(包含 256 个字符)转换 string 的字符, 要过滤掉的字符放到 deletechars 参数中</td>
+</tr>
+<tr>
+<td align="left">38</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-upper.html" target="_blank" rel="noopener">upper()</a> 转换字符串中的小写字母为大写</td>
+</tr>
+<tr>
+<td align="left">39</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-zfill.html" target="_blank" rel="noopener">zfill (width)</a> 返回长度为 width 的字符串，原字符串右对齐，前面填充0</td>
+</tr>
+<tr>
+<td align="left">40</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-string-isdecimal.html" target="_blank" rel="noopener">isdecimal()</a> 检查字符串是否只包含十进制字符，如果是返回 true，否则返回 false。</td>
+</tr>
+</tbody></table>
+<h2 id="List-列表"><a href="#List-列表" class="headerlink" title="List(列表)"></a>List(列表)</h2><ul>
+<li>1、List写在方括号之间，元素用逗号隔开。</li>
+<li>2、和字符串一样，list可以被索引和切片。</li>
+<li>3、List可以使用+操作符进行拼接。</li>
+<li>4、List中的元素是可以改变的。</li>
+</ul>
+<h3 id="更新列表"><a href="#更新列表" class="headerlink" title="更新列表"></a>更新列表</h3><p>可以使用append()方法来添加列表项。</p>
+<h3 id="删除列表元素"><a href="#删除列表元素" class="headerlink" title="删除列表元素"></a>删除列表元素</h3><p>可以使用 del 语句来删除列表的的元素</p>
+<h3 id="Python列表函数-amp-方法"><a href="#Python列表函数-amp-方法" class="headerlink" title="Python列表函数&amp;方法"></a>Python列表函数&amp;方法</h3><p>Python包含以下函数:</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">函数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-len.html" target="_blank" rel="noopener">len(list)</a> 列表元素个数</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-max.html" target="_blank" rel="noopener">max(list)</a> 返回列表元素最大值</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-min.html" target="_blank" rel="noopener">min(list)</a> 返回列表元素最小值</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-list.html" target="_blank" rel="noopener">list(seq)</a> 将元组转换为列表</td>
+</tr>
+</tbody></table>
+<p>Python包含以下方法:</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-append.html" target="_blank" rel="noopener">list.append(obj)</a> 在列表末尾添加新的对象</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-count.html" target="_blank" rel="noopener">list.count(obj)</a> 统计某个元素在列表中出现的次数</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-extend.html" target="_blank" rel="noopener">list.extend(seq)</a> 在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-index.html" target="_blank" rel="noopener">list.index(obj)</a> 从列表中找出某个值第一个匹配项的索引位置</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-insert.html" target="_blank" rel="noopener">list.insert(index, obj)</a> 将对象插入列表</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-pop.html" target="_blank" rel="noopener">list.pop([index=-1])</a> 移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-remove.html" target="_blank" rel="noopener">list.remove(obj)</a> 移除列表中某个值的第一个匹配项</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-reverse.html" target="_blank" rel="noopener">list.reverse()</a> 反向列表中元素</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-sort.html" target="_blank" rel="noopener">list.sort( key=None, reverse=False)</a> 对原列表进行排序</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-clear.html" target="_blank" rel="noopener">list.clear()</a> 清空列表</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-list-copy.html" target="_blank" rel="noopener">list.copy()</a> 复制列表</td>
+</tr>
+</tbody></table>
+<h2 id="Tuple-元组"><a href="#Tuple-元组" class="headerlink" title="Tuple(元组)"></a>Tuple(元组)</h2><ul>
+<li>1、与字符串一样，元组的元素不能修改。</li>
+<li>2、元组也可以被索引和切片，方法一样。</li>
+<li>3、注意构造包含 0 或 1 个元素的元组的特殊语法规则。</li>
+<li>4、元组也可以使用+操作符进行拼接。</li>
+</ul>
+<h3 id="元组内置函数"><a href="#元组内置函数" class="headerlink" title="元组内置函数"></a>元组内置函数</h3><p>Python元组包含了以下内置函数</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">方法及描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">len(tuple) 计算元组元素个数。</td>
+<td align="left"><code>&gt;&gt;&gt; tuple1 = (&#39;Google&#39;, &#39;Runoob&#39;, &#39;Taobao&#39;) &gt;&gt;&gt; len(tuple1) 3 &gt;&gt;&gt;</code></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">max(tuple) 返回元组中元素最大值。</td>
+<td align="left"><code>&gt;&gt;&gt; tuple2 = (&#39;5&#39;, &#39;4&#39;, &#39;8&#39;) &gt;&gt;&gt; max(tuple2) &#39;8&#39; &gt;&gt;&gt;</code></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">min(tuple) 返回元组中元素最小值。</td>
+<td align="left"><code>&gt;&gt;&gt; tuple2 = (&#39;5&#39;, &#39;4&#39;, &#39;8&#39;) &gt;&gt;&gt; min(tuple2) &#39;4&#39; &gt;&gt;&gt;</code></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">tuple(seq) 将列表转换为元组。</td>
+<td align="left"><code>&gt;&gt;&gt; list1= [&#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;, &#39;Baidu&#39;] &gt;&gt;&gt; tuple1=tuple(list1) &gt;&gt;&gt; tuple1 (&#39;Google&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;, &#39;Baidu&#39;)</code></td>
+</tr>
+</tbody></table>
+<h2 id="Dictionary-字典"><a href="#Dictionary-字典" class="headerlink" title="Dictionary(字典)"></a>Dictionary(字典)</h2><p>键必须是唯一的，但值则不必。</p>
+<h2 id="字典内置函数-amp-方法"><a href="#字典内置函数-amp-方法" class="headerlink" title="字典内置函数&amp;方法"></a>字典内置函数&amp;方法</h2><p>Python字典包含了以下内置函数：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">函数及描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">len(dict) 计算字典元素个数，即键的总数。</td>
+<td align="left"><code>&gt;&gt;&gt; dict = {&#39;Name&#39;: &#39;Runoob&#39;, &#39;Age&#39;: 7, &#39;Class&#39;: &#39;First&#39;} &gt;&gt;&gt; len(dict) 3</code></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">str(dict) 输出字典，以可打印的字符串表示。</td>
+<td align="left"><code>&gt;&gt;&gt; dict = {&#39;Name&#39;: &#39;Runoob&#39;, &#39;Age&#39;: 7, &#39;Class&#39;: &#39;First&#39;} &gt;&gt;&gt; str(dict) &quot;{&#39;Name&#39;: &#39;Runoob&#39;, &#39;Class&#39;: &#39;First&#39;, &#39;Age&#39;: 7}&quot;</code></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">type(variable) 返回输入的变量类型，如果变量是字典就返回字典类型。</td>
+<td align="left"><code>&gt;&gt;&gt; dict = {&#39;Name&#39;: &#39;Runoob&#39;, &#39;Age&#39;: 7, &#39;Class&#39;: &#39;First&#39;} &gt;&gt;&gt; type(dict) &lt;class &#39;dict&#39;&gt;</code></td>
+</tr>
+</tbody></table>
+<p>Python字典包含了以下内置方法：</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">函数及描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-clear.html" target="_blank" rel="noopener">radiansdict.clear()</a> 删除字典内所有元素</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-copy.html" target="_blank" rel="noopener">radiansdict.copy()</a> 返回一个字典的浅复制</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-fromkeys.html" target="_blank" rel="noopener">radiansdict.fromkeys()</a> 创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-get.html" target="_blank" rel="noopener">radiansdict.get(key, default=None)</a> 返回指定键的值，如果值不在字典中返回default值</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-in.html" target="_blank" rel="noopener">key in dict</a> 如果键在字典dict里返回true，否则返回false</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-items.html" target="_blank" rel="noopener">radiansdict.items()</a> 以列表返回可遍历的(键, 值) 元组数组</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-keys.html" target="_blank" rel="noopener">radiansdict.keys()</a> 返回一个迭代器，可以使用 list() 来转换为列表</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-setdefault.html" target="_blank" rel="noopener">radiansdict.setdefault(key, default=None)</a> 和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-update.html" target="_blank" rel="noopener">radiansdict.update(dict2)</a> 把字典dict2的键/值对更新到dict里</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-values.html" target="_blank" rel="noopener">radiansdict.values()</a> 返回一个迭代器，可以使用 list() 来转换为列表</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-pop.html" target="_blank" rel="noopener">pop(key[,default])</a> 删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left"><a href="https://www.runoob.com/python3/python3-att-dictionary-popitem.html" target="_blank" rel="noopener">popitem()</a> 随机返回并删除字典中的最后一对键和值。</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/语言/" rel="tag"># 语言</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/16/linux常用命令/" rel="next" title="linux常用命令">
+                <i class="fa fa-chevron-left"></i> linux常用命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">doudou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#python基础"><span class="nav-number">1.</span> <span class="nav-text">python基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python3-基础语法"><span class="nav-number">2.</span> <span class="nav-text">Python3 基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标识符"><span class="nav-number">2.1.</span> <span class="nav-text">标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python保留字"><span class="nav-number">2.2.</span> <span class="nav-text">python保留字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">2.3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行与缩进"><span class="nav-number">2.4.</span> <span class="nav-text">行与缩进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多行语句"><span class="nav-number">2.5.</span> <span class="nav-text">多行语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标准数据类型"><span class="nav-number">2.6.</span> <span class="nav-text">标准数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python数据类型转换"><span class="nav-number">2.7.</span> <span class="nav-text">Python数据类型转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字-Number-类型"><span class="nav-number">3.</span> <span class="nav-text">数字(Number)类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python算术运算符"><span class="nav-number">3.1.</span> <span class="nav-text">Python算术运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python比较运算符"><span class="nav-number">3.2.</span> <span class="nav-text">Python比较运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python赋值运算符"><span class="nav-number">3.3.</span> <span class="nav-text">Python赋值运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python位运算符"><span class="nav-number">3.4.</span> <span class="nav-text">Python位运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python逻辑运算符"><span class="nav-number">3.5.</span> <span class="nav-text">Python逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python成员运算符"><span class="nav-number">3.6.</span> <span class="nav-text">Python成员运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python身份运算符"><span class="nav-number">3.7.</span> <span class="nav-text">Python身份运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python运算符优先级"><span class="nav-number">3.8.</span> <span class="nav-text">Python运算符优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学函数"><span class="nav-number">4.</span> <span class="nav-text">数学函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机数函数"><span class="nav-number">5.</span> <span class="nav-text">随机数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学常量"><span class="nav-number">6.</span> <span class="nav-text">数学常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串-String"><span class="nav-number">7.</span> <span class="nav-text">字符串(String)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-的字符串内建函数"><span class="nav-number">8.</span> <span class="nav-text">Python 的字符串内建函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List-列表"><span class="nav-number">9.</span> <span class="nav-text">List(列表)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更新列表"><span class="nav-number">9.1.</span> <span class="nav-text">更新列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除列表元素"><span class="nav-number">9.2.</span> <span class="nav-text">删除列表元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python列表函数-amp-方法"><span class="nav-number">9.3.</span> <span class="nav-text">Python列表函数&amp;方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tuple-元组"><span class="nav-number">10.</span> <span class="nav-text">Tuple(元组)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元组内置函数"><span class="nav-number">10.1.</span> <span class="nav-text">元组内置函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dictionary-字典"><span class="nav-number">11.</span> <span class="nav-text">Dictionary(字典)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典内置函数-amp-方法"><span class="nav-number">12.</span> <span class="nav-text">字典内置函数&amp;方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">doudou</span>
+
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+-->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+<!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
