@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[git常用命令]]></title>
     <url>%2F2020%2F03%2F20%2Fgit%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[git常用命令查看状态1git status 查看工作区、缓存区状态 添加删除12git add &lt;file&gt; 向工作区添加文件git rm --cached &lt;file&gt; 删除工作区文件 提交1git commit -m &quot;commit message&quot; &lt;file&gt; 提交 查看历史记录1234git log 查看历史记录git log --pretty=oneline 按行打印git log oneline 按行打印简介版git reflog 查看回退指针需要移动的次数 版本前进后退123git reset --hard &lt;索引值&gt; 跳转到指定版本git reset --hard HEAD^n 只能往前git reset --hard HEAD~n 只能往后 文件比较1git diff &lt;file&gt; 1 12 1 12]]></content>
+    <content type="text"><![CDATA[git常用命令查看状态1git status 查看工作区、缓存区状态 添加删除12git add &lt;file&gt; 向工作区添加文件git rm --cached &lt;file&gt; 删除工作区文件 提交1git commit -m &quot;commit message&quot; &lt;file&gt; 提交 查看历史记录1234git log 查看历史记录git log --pretty=oneline 按行打印git log oneline 按行打印简介版git reflog 查看回退指针需要移动的次数 版本前进后退123git reset --hard &lt;索引值&gt; 跳转到指定版本git reset --hard HEAD^n 只能往前git reset --hard HEAD~n 只能往后 文件比较1git diff &lt;file&gt; （待填]]></content>
       <tags>
         <tag>git</tag>
       </tags>
@@ -228,17 +228,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[windows上mysql安装]]></title>
-    <url>%2F2019%2F10%2F01%2Fwindows%E4%B8%8Amysql%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[windows上mysql安装下载安装包，解压到A:\web\mysql-8.0.17-winx64 在A:\web\mysql-8.0.17-winx64中添加配置文件my.ini 1234567891011121314151617[client]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]# 设置3306端口port = 3306# 设置mysql的安装目录basedir=A:\web\mysql-8.0.17-winx64# 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错# datadir=A:\\web\\sqldata# 允许最大连接数max_connections=20# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB 启动 MySQL 数据库命令行启动cd A:\web\mysql-8.0.17-winx64 初始化数据库mysqld --initialize --console 记录密码 安装命令mysqld install 启动命令net start mysql 登录mysqlmysql -u root -p navicat 2059问题原因： 8+ 版本使用的密码加密规则为 。caching_sha2_password而 navicate 驱动目前不支持新加密规则，解决问题方法有两种，一种是升级 navicat 驱动，一种是把 mysql 用户登录密码加密规则还原成 mysql_native_password，这里我们将 mysql 规则修改回之前的 mysql_native_password， 123ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;你的密码&apos; PASSWORD EXPIRE NEVER; # 修改加密规则 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;你的密码&apos;; # 更新一下用户的密码 FLUSH PRIVILEGES; #刷新权限 navicat 1130问题解决方法 登录数据库mysql -u root -p 执行如下命令 12GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;您的数据库密码&apos; WITH GRANT OPTION;flush privileges;]]></content>
-      <categories>
-        <category>环境配置</category>
-      </categories>
-      <tags>
-        <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[右键创建md文档]]></title>
     <url>%2F2019%2F10%2F01%2F%E5%8F%B3%E9%94%AE%E5%88%9B%E5%BB%BAmd%E6%96%87%E6%A1%A3%2F</url>
     <content type="text"><![CDATA[右键创建md文档使用的md编辑器为typore，在任意位置创建一个记事本，复制如下内容 123456789Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\.md]@=&quot;TyporaMarkdownFile&quot;&quot;PerceivedType&quot;=&quot;text&quot;&quot;Content Type&quot;=&quot;text/plain&quot;[HKEY_CLASSES_ROOT\.md\ShellNew]&quot;NullFile&quot;=&quot;&quot; 修改后缀名为reg，双击添加到注册表。]]></content>
@@ -250,6 +239,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[windows上mysql安装]]></title>
+    <url>%2F2019%2F10%2F01%2Fwindows%E4%B8%8Amysql%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[windows上mysql安装下载安装包，解压到A:\web\mysql-8.0.17-winx64 在A:\web\mysql-8.0.17-winx64中添加配置文件my.ini 1234567891011121314151617[client]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]# 设置3306端口port = 3306# 设置mysql的安装目录basedir=A:\web\mysql-8.0.17-winx64# 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错# datadir=A:\\web\\sqldata# 允许最大连接数max_connections=20# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB 启动 MySQL 数据库命令行启动cd A:\web\mysql-8.0.17-winx64 初始化数据库mysqld --initialize --console 记录密码 安装命令mysqld install 启动命令net start mysql 登录mysqlmysql -u root -p navicat 2059问题原因： 8+ 版本使用的密码加密规则为 。caching_sha2_password而 navicate 驱动目前不支持新加密规则，解决问题方法有两种，一种是升级 navicat 驱动，一种是把 mysql 用户登录密码加密规则还原成 mysql_native_password，这里我们将 mysql 规则修改回之前的 mysql_native_password， 123ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;你的密码&apos; PASSWORD EXPIRE NEVER; # 修改加密规则 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;你的密码&apos;; # 更新一下用户的密码 FLUSH PRIVILEGES; #刷新权限 navicat 1130问题解决方法 登录数据库mysql -u root -p 执行如下命令 12GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;您的数据库密码&apos; WITH GRANT OPTION;flush privileges;]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[linux上mysql安装]]></title>
     <url>%2F2019%2F10%2F01%2Flinux%E4%B8%8Amysql%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[linux上mysql安装使用命令行执行下列代码。1234wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpmrpm -ivh mysql-community-release-el7-5.noarch.rpmyum updateyum install mysql-server 权限设置chown mysql:mysql -R /var/lib/mysql 初始化 MySQLmysqld --initialize 出现了如下问题 解决方法 在配置/etc/my.cnf中加入 12[mysqld]explicit_defaults_for_timestamp=true 启动 MySQLsystemctl start mysqld 查看 MySQL 运行状态systemctl status mysqld 验证mysql安装使用 mysqladmin 命令来检查服务器的版本, 在 linux 上该二进制文件位于 /usr/bin 目录，在 Windows 上该二进制文件位于C:\mysql\bin 。 使用如下命令mysqladmin --version Mysql安装成功后，默认的root用户密码为空，你可以使用以下命令来创建root用户的密码 1mysqladmin -u root password &quot;123456&quot;; 连接mysql1mysql -u root -p]]></content>
@@ -257,8 +257,8 @@
         <category>环境配置</category>
       </categories>
       <tags>
-        <tag>linux</tag>
         <tag>mysql</tag>
+        <tag>linux</tag>
       </tags>
   </entry>
 </search>
