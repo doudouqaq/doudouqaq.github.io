@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[字符画搭建过程]]></title>
+    <url>%2F2020%2F03%2F25%2F%E5%AD%97%E7%AC%A6%E7%94%BB%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[字符画搭建过程复习一下项目搭建的过程，项目地址http://47.102.118.76:8080/letterPic github地址https://github.com/doudouqaq/LetterPicture 前端创建项目123vue init webpack &quot;项目名称&quot; //创建项目npm run dev //运行项目npm i element-ui –S //安装elementui 引用elementui1234import ElementUI from &apos;element-ui&apos;;import &apos;element-ui/lib/theme-chalk/index.css&apos;;Vue.use(ElementUI); 后端创建项目12express &quot;项目名称&quot; -e //创建项目npm start //运行项目 安装multiparty来储存图片12345let form = new multiparty.Form();var path = require(&apos;path&apos;);form.uploadDir = path.resolve(__dirname, &apos;../public/images&apos;);form.keepExtensions = true; //是否保留后缀form.autoFiels = true; //启用文件事件，并禁用部分文件事件，如果监听文件事件，则默认为true。 安装child_process来运行python脚本123workerProcess = child_process.exec(&apos;python ./public/python/letterPic.py &apos; + &apos;./public/images/&apos; + picName, function (error, stdout, stderr)&#123; ...&#125; 项目部署前端部署好久没用服务器了，发现22端口访问不了，使用阿里云的救援连接，重置22端口。 123456netstat -ntlp|grep 22 //检查端口状态打开SSH服务，开启22端口，执行以下命令；sudo apt-get install openssh-serversudo apt-get install ufwsudo ufw enablesudo ufw allow 22 但是8080端口还要重新设置 12iptables -L --line-number //查看一下本机防火墙现有的规则列表iptables -I INPUT 5 -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT //开启tomact 向打包好的dist文件夹重命名为letterPic放在webapps文件夹下，通过访问http://47.102.118.76:8080/letterPic访问项目，打包后访问发现是空白页，是路径的问题，在index.html中修改路径，在所有的路径前加.即可。 后端部署使用后台运行nodejs项目的插件pm2 123npm install -g pm2 //安装插件pm2 start app.js //启动app项目pm2 list 列出由pm2管理的所有进程信息 npm start和node app.js启动时，发现程序可以访问，pm2执行缺不可以，原来是端口未被监听。 123456netstat -ntlp 查看node端口是否被监听配置package.json文件&quot;scripts&quot;: &#123;&quot;start&quot;: &quot;node ./bin/www&quot;,&quot;prd&quot;: &quot;pm2 start bin/www&quot;&#125;, 运行pm2 start bin/www即可。 python更新服务器的python还是python2，更新到python3 12345tar -zxvf Python-3.7.0.tgzcd Python-3.7.0 ./configuremakemake install 其他坑点后端设置跨域位置写错了，改了好久QAQ linux上路径是/，和windows环境\不一样]]></content>
+      <tags>
+        <tag>项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git常用命令]]></title>
+    <url>%2F2020%2F03%2F20%2Fgit%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[git常用命令查看状态1git status 查看工作区、缓存区状态 添加删除12git add &lt;file&gt; 向工作区添加文件git rm --cached &lt;file&gt; 删除工作区文件 提交1git commit -m &quot;commit message&quot; &lt;file&gt; 提交 查看历史记录1234git log 查看历史记录git log --pretty=oneline 按行打印git log oneline 按行打印简介版git reflog 查看回退指针需要移动的次数 版本前进后退123git reset --hard &lt;索引值&gt; 跳转到指定版本git reset --hard HEAD^n 只能往前git reset --hard HEAD~n 只能往后 文件比较1git diff &lt;file&gt; 1 12 1 12]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[常用算法js实现]]></title>
     <url>%2F2020%2F03%2F13%2F%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95js%E5%AE%9E%E7%8E%B0%2F</url>
     <content type="text"><![CDATA[常用算法js实现排序算法冒泡排序123456789101112function bubbleSort(arr) &#123; for (var i = 1; i &lt; arr.length; i++) &#123; for (var j = 0; j &lt; arr.length - i; j++) &#123; if (arr[j] &gt; arr[j + 1]) &#123; var temp = arr[j]; arr[j] = arr[j + 1]; arr[j + 1] = temp; &#125; &#125; &#125; return arr;&#125; 选择排序123456789101112131415function selectionSort(arr) &#123; var maxIndex = 0; for (var i = arr.length - 1; i &gt;= 0; i--) &#123; for (var j = 0; j &lt;= i; j++) &#123; if (arr[j] &gt; arr[maxIndex]) &#123; maxIndex = j; &#125; &#125; var temp = arr[maxIndex]; arr[maxIndex] = arr[i]; arr[i] = temp; maxIndex = 0; &#125; return arr;&#125; 插入排序123456789101112function insertSort(arr) &#123; for (var i = 0; i &lt; arr.length; i++) &#123; for (var j = i; j &gt; 0; j--) &#123; if (arr[j] &lt; arr[j - 1]) &#123; var temp = arr[j]; arr[j] = arr[j - 1]; arr[j - 1] = temp; &#125; &#125; &#125; return arr;&#125; 快速排序1234567891011121314151617181920212223242526272829303132333435function partition(arr, left, right) &#123; var flagItem = left; var i =left + 1; var j = right; while(true)&#123; while(i&lt;= right &amp;&amp; arr[i]&lt;arr[flagItem])&#123; i++; &#125; while(j&gt;= left &amp;&amp; arr[j]&gt;arr[flagItem])&#123; j--; &#125; if (i &gt; j) &#123; break; &#125; else &#123; var temp = arr[j]; arr[j] = arr[j + 1]; arr[j + 1] = temp; i++; j--; &#125; &#125; var temp = arr[j]; arr[j] = arr[left]; arr[left] = temp; return j;&#125;function quickSort(arr, left = 0, right = arr.length - 1) &#123; if (left &gt;= right) &#123; return; &#125; mid = partition(arr, left, right); quickSort(arr, left, mid -1); quickSort(arr, mid+1, right); return arr;&#125; 归并排序123456789101112131415161718192021222324252627282930313233function mergeSort(arr) &#123; const length = arr.length; if (length === 1) &#123; return arr; &#125; const mid = Math.floor(length / 2); const left = arr.slice(0, mid); const right = arr.slice(mid, length); return merge(mergeSort(left), mergeSort(right));&#125;function merge(left, right) &#123; const result = []; let il = 0; let ir = 0; while( il &lt; left.length &amp;&amp; ir &lt; right.length) &#123; if (left[il] &lt; right[ir]) &#123; result.push(left[il]); il++; &#125; else &#123; result.push(right[ir]); ir++; &#125; &#125; while (il &lt; left.length) &#123; result.push(left[il]); il++; &#125; while(ir &lt; right.length) &#123; result.push(right[ir]); ir++; &#125; return result;&#125; 堆排序123456789101112131415161718192021222324252627282930313233343536373839function headSort(arr)&#123; buildHeap(arr); var len = arr.length; for(var i=len-1;i&gt;0;i--)&#123; swap(arr,0,i); heapify(arr,i); &#125; return arr;&#125;function buildHeap(arr)&#123; var len = arr.length; if(len == 0) return; for(var i=Math.floor(len/2);i&gt;0;i--)&#123; heapify(arr,i); &#125;&#125;function heapify(arr,i)&#123; var left = 2*i+1; var right = 2*i+2; var largest = i; var len = arr.length; if(left &lt;len &amp;&amp; arr[left]&gt;arr[largest])&#123; largest=left; &#125; if(right &lt;len &amp;&amp; arr[right]&gt;largest)&#123; largest=right; &#125; if(largest != i)&#123; swap(arr,i,largest); heapify(arr,largest); &#125;&#125;function swap(arr,i,j)&#123; var temp=arr[i]; arr[i] = arr[j]; arr[j] = temp;&#125; 原生实现ajax请求1234567891011121314151617181920//getfunction ajax(url, cb) &#123; let xhr; if(window.XMLHttpRequest) &#123; xhr = new XMLHttpRequest(); &#125; else &#123; xhr = ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); &#125; xhr.onreadystatechange = function() &#123; if(xhr.readyState == 4 &amp;&amp; xhr.status == 200) &#123; cb(xhr.responseText); &#125; &#125; xhr.open(&apos;GET&apos;, url, true); xhr.send();&#125;//post对请求头进行修改并传入数据xhr.open(&quot;POST&quot;, url, true);xhr.setRequestHeader(&quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;);xhr.send(&quot;key1=value1&amp;key2=value2&quot;); 路由实现1234567891011121314151617function Router() &#123; this.routes = &#123;&#125;; this.currentUrl = &apos;&apos;;&#125;Router.prototype.route = function(path, callback) &#123; this.routes[path] = callback || function()&#123;&#125;;&#125;;Router.prototype.refresh = function() &#123; this.currentUrl = location.hash.slice(1) || &apos;/&apos;; this.routes[this.currentUrl]();&#125;;Router.prototype.init = function() &#123; window.addEventListener(&apos;load&apos;, this.refresh.bind(this), false); window.addEventListener(&apos;hashchange&apos;, this.refresh.bind(this), false);&#125;window.Router = new Router();window.Router.init(); 数组扁平化1234567891011function flatten(arr) &#123; let res = []; arr.map(item =&gt; &#123; if(Array.isArray(item)) &#123; res = res.concat(flatten(item)) &#125; else &#123; res.push(item); &#125; &#125;) return res;&#125;]]></content>
@@ -212,17 +228,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[右键创建md文档]]></title>
-    <url>%2F2019%2F10%2F01%2F%E5%8F%B3%E9%94%AE%E5%88%9B%E5%BB%BAmd%E6%96%87%E6%A1%A3%2F</url>
-    <content type="text"><![CDATA[右键创建md文档使用的md编辑器为typore，在任意位置创建一个记事本，复制如下内容 123456789Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\.md]@=&quot;TyporaMarkdownFile&quot;&quot;PerceivedType&quot;=&quot;text&quot;&quot;Content Type&quot;=&quot;text/plain&quot;[HKEY_CLASSES_ROOT\.md\ShellNew]&quot;NullFile&quot;=&quot;&quot; 修改后缀名为reg，双击添加到注册表。]]></content>
-      <categories>
-        <category>环境配置</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[windows上mysql安装]]></title>
     <url>%2F2019%2F10%2F01%2Fwindows%E4%B8%8Amysql%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[windows上mysql安装下载安装包，解压到A:\web\mysql-8.0.17-winx64 在A:\web\mysql-8.0.17-winx64中添加配置文件my.ini 1234567891011121314151617[client]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]# 设置3306端口port = 3306# 设置mysql的安装目录basedir=A:\web\mysql-8.0.17-winx64# 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错# datadir=A:\\web\\sqldata# 允许最大连接数max_connections=20# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB 启动 MySQL 数据库命令行启动cd A:\web\mysql-8.0.17-winx64 初始化数据库mysqld --initialize --console 记录密码 安装命令mysqld install 启动命令net start mysql 登录mysqlmysql -u root -p navicat 2059问题原因： 8+ 版本使用的密码加密规则为 。caching_sha2_password而 navicate 驱动目前不支持新加密规则，解决问题方法有两种，一种是升级 navicat 驱动，一种是把 mysql 用户登录密码加密规则还原成 mysql_native_password，这里我们将 mysql 规则修改回之前的 mysql_native_password， 123ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;你的密码&apos; PASSWORD EXPIRE NEVER; # 修改加密规则 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;你的密码&apos;; # 更新一下用户的密码 FLUSH PRIVILEGES; #刷新权限 navicat 1130问题解决方法 登录数据库mysql -u root -p 执行如下命令 12GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;您的数据库密码&apos; WITH GRANT OPTION;flush privileges;]]></content>
@@ -231,6 +236,17 @@
       </categories>
       <tags>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[右键创建md文档]]></title>
+    <url>%2F2019%2F10%2F01%2F%E5%8F%B3%E9%94%AE%E5%88%9B%E5%BB%BAmd%E6%96%87%E6%A1%A3%2F</url>
+    <content type="text"><![CDATA[右键创建md文档使用的md编辑器为typore，在任意位置创建一个记事本，复制如下内容 123456789Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\.md]@=&quot;TyporaMarkdownFile&quot;&quot;PerceivedType&quot;=&quot;text&quot;&quot;Content Type&quot;=&quot;text/plain&quot;[HKEY_CLASSES_ROOT\.md\ShellNew]&quot;NullFile&quot;=&quot;&quot; 修改后缀名为reg，双击添加到注册表。]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
       </tags>
   </entry>
   <entry>
