@@ -228,17 +228,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[右键创建md文档]]></title>
-    <url>%2F2019%2F10%2F01%2F%E5%8F%B3%E9%94%AE%E5%88%9B%E5%BB%BAmd%E6%96%87%E6%A1%A3%2F</url>
-    <content type="text"><![CDATA[右键创建md文档使用的md编辑器为typore，在任意位置创建一个记事本，复制如下内容 123456789Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\.md]@=&quot;TyporaMarkdownFile&quot;&quot;PerceivedType&quot;=&quot;text&quot;&quot;Content Type&quot;=&quot;text/plain&quot;[HKEY_CLASSES_ROOT\.md\ShellNew]&quot;NullFile&quot;=&quot;&quot; 修改后缀名为reg，双击添加到注册表。]]></content>
-      <categories>
-        <category>环境配置</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[windows上mysql安装]]></title>
     <url>%2F2019%2F10%2F01%2Fwindows%E4%B8%8Amysql%E5%AE%89%E8%A3%85%2F</url>
     <content type="text"><![CDATA[windows上mysql安装下载安装包，解压到A:\web\mysql-8.0.17-winx64 在A:\web\mysql-8.0.17-winx64中添加配置文件my.ini 1234567891011121314151617[client]# 设置mysql客户端默认字符集default-character-set=utf8 [mysqld]# 设置3306端口port = 3306# 设置mysql的安装目录basedir=A:\web\mysql-8.0.17-winx64# 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错# datadir=A:\\web\\sqldata# 允许最大连接数max_connections=20# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB 启动 MySQL 数据库命令行启动cd A:\web\mysql-8.0.17-winx64 初始化数据库mysqld --initialize --console 记录密码 安装命令mysqld install 启动命令net start mysql 登录mysqlmysql -u root -p navicat 2059问题原因： 8+ 版本使用的密码加密规则为 。caching_sha2_password而 navicate 驱动目前不支持新加密规则，解决问题方法有两种，一种是升级 navicat 驱动，一种是把 mysql 用户登录密码加密规则还原成 mysql_native_password，这里我们将 mysql 规则修改回之前的 mysql_native_password， 123ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;你的密码&apos; PASSWORD EXPIRE NEVER; # 修改加密规则 ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;你的密码&apos;; # 更新一下用户的密码 FLUSH PRIVILEGES; #刷新权限 navicat 1130问题解决方法 登录数据库mysql -u root -p 执行如下命令 12GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;您的数据库密码&apos; WITH GRANT OPTION;flush privileges;]]></content>
@@ -247,6 +236,17 @@
       </categories>
       <tags>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[右键创建md文档]]></title>
+    <url>%2F2019%2F10%2F01%2F%E5%8F%B3%E9%94%AE%E5%88%9B%E5%BB%BAmd%E6%96%87%E6%A1%A3%2F</url>
+    <content type="text"><![CDATA[右键创建md文档使用的md编辑器为typore，在任意位置创建一个记事本，复制如下内容 123456789Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\.md]@=&quot;TyporaMarkdownFile&quot;&quot;PerceivedType&quot;=&quot;text&quot;&quot;Content Type&quot;=&quot;text/plain&quot;[HKEY_CLASSES_ROOT\.md\ShellNew]&quot;NullFile&quot;=&quot;&quot; 修改后缀名为reg，双击添加到注册表。]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
       </tags>
   </entry>
   <entry>
