@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="canvas,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="canvas教程基本用法canvas主要用来绘制2d图像。 canvas有两个必要属性，分别是width和height。 canvas可以有margin，border，background等属性。 &amp;lt;canvas&amp;gt;只是创造一个固定大小的画布，需要使用渲染上下文来绘制内容。 12var canvas = document.getElementById(&amp;apos;canvas&amp;apos;">
+<meta name="keywords" content="canvas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas教程">
+<meta property="og:url" content="http://yoursite.com/2020/04/10/canvas教程/index.html">
+<meta property="og:site_name" content="doudouQAQ">
+<meta property="og:description" content="canvas教程基本用法canvas主要用来绘制2d图像。 canvas有两个必要属性，分别是width和height。 canvas可以有margin，border，background等属性。 &amp;lt;canvas&amp;gt;只是创造一个固定大小的画布，需要使用渲染上下文来绘制内容。 12var canvas = document.getElementById(&amp;apos;canvas&amp;apos;">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-04-10T07:15:07.873Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="canvas教程">
+<meta name="twitter:description" content="canvas教程基本用法canvas主要用来绘制2d图像。 canvas有两个必要属性，分别是width和height。 canvas可以有margin，border，background等属性。 &amp;lt;canvas&amp;gt;只是创造一个固定大小的画布，需要使用渲染上下文来绘制内容。 12var canvas = document.getElementById(&amp;apos;canvas&amp;apos;">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/04/10/canvas教程/">
+
+
+
+
+
+  <title>canvas教程 | doudouQAQ</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">doudouQAQ</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/10/canvas教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="doudou">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="doudouQAQ">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">canvas教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-10T12:25:55+08:00">
+                2020-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/FrontEnd/" itemprop="url" rel="index">
+                    <span itemprop="name">FrontEnd</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.8k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7 min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="canvas教程"><a href="#canvas教程" class="headerlink" title="canvas教程"></a>canvas教程</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>canvas主要用来绘制2d图像。</p>
+<p>canvas有两个必要属性，分别是<code>width</code>和<code>height</code>。</p>
+<p>canvas可以有<code>margin</code>，<code>border</code>，<code>background</code>等属性。</p>
+<p><code>&lt;canvas&gt;</code>只是创造一个固定大小的画布，需要使用渲染上下文来绘制内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var canvas = document.getElementById(&apos;canvas&apos;); //canvas实例</span><br><span class="line">var ctx = canvas.getContext(&apos;2d&apos;); //渲染上下文，操作ctx来绘制图像</span><br></pre></td></tr></table></figure>
+
+<h2 id="绘制形状"><a href="#绘制形状" class="headerlink" title="绘制形状"></a>绘制形状</h2><h3 id="绘制矩形"><a href="#绘制矩形" class="headerlink" title="绘制矩形"></a>绘制矩形</h3><p>canvas提供了三种方法绘制矩形：</p>
+<h4 id="fillRect-x-y-width-height"><a href="#fillRect-x-y-width-height" class="headerlink" title="fillRect(x, y, width, height)"></a>fillRect(x, y, width, height)</h4><p>绘制一个填充的矩形</p>
+<h4 id="strokeRect-x-y-width-height"><a href="#strokeRect-x-y-width-height" class="headerlink" title="strokeRect(x, y, width, height)"></a>strokeRect(x, y, width, height)</h4><p>绘制一个矩形的边框</p>
+<h4 id="clearRect-x-y-width-height"><a href="#clearRect-x-y-width-height" class="headerlink" title="clearRect(x, y, width, height)"></a>clearRect(x, y, width, height)</h4><p>清除指定矩形区域，让清除部分完全透明。</p>
+<h4 id="rect-x-y-width-height"><a href="#rect-x-y-width-height" class="headerlink" title="rect(x, y, width, height)"></a>rect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>)</h4><p>绘制一个左上角坐标为（x,y），宽高为width以及height的矩形。</p>
+<h3 id="绘制路径"><a href="#绘制路径" class="headerlink" title="绘制路径"></a>绘制路径</h3><h4 id="beginPath"><a href="#beginPath" class="headerlink" title="beginPath()"></a>beginPath()</h4><p>新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。</p>
+<h4 id="closePath"><a href="#closePath" class="headerlink" title="closePath()"></a>closePath()</h4><p>闭合路径之后图形绘制命令又重新指向到上下文中。</p>
+<h4 id="stroke"><a href="#stroke" class="headerlink" title="stroke()"></a>stroke()</h4><p>通过线条来绘制图形轮廓。</p>
+<h4 id="fill"><a href="#fill" class="headerlink" title="fill()"></a>fill()</h4><p>通过填充路径的内容区域生成实心的图形。</p>
+<h4 id="clip"><a href="#clip" class="headerlink" title="clip()"></a>clip()</h4><p>将当前正在构建的路径转换为当前的裁剪路径。</p>
+<h3 id="移动笔触"><a href="#移动笔触" class="headerlink" title="移动笔触"></a>移动笔触</h3><h4 id="moveTo-x-y"><a href="#moveTo-x-y" class="headerlink" title="moveTo(x, y)"></a>moveTo(x, y)</h4><p>默认情况下第一条路径构造命令。</p>
+<h3 id="绘制线"><a href="#绘制线" class="headerlink" title="绘制线"></a>绘制线</h3><h4 id="lineTo-x-y"><a href="#lineTo-x-y" class="headerlink" title="lineTo(x, y)"></a>lineTo(x, y)</h4><p>绘制线段</p>
+<h3 id="绘制圆弧"><a href="#绘制圆弧" class="headerlink" title="绘制圆弧"></a>绘制圆弧</h3><h4 id="arc-x-y-radius-startAngle-endAngle-anticlockwise"><a href="#arc-x-y-radius-startAngle-endAngle-anticlockwise" class="headerlink" title="arc(x, y, radius, startAngle, endAngle, anticlockwise)"></a>arc(x, y, radius, startAngle, endAngle, anticlockwise)</h4><p>画一个以（x,y）为圆心的以radius为半径的圆弧（圆），从startAngle开始到endAngle结束，按照anticlockwise给定的方向（默认为顺时针）来生成。</p>
+<h4 id="arcTo-x1-y1-x2-y2-radius"><a href="#arcTo-x1-y1-x2-y2-radius" class="headerlink" title="arcTo(x1, y1, x2, y2, radius)"></a>arcTo(x1, y1, x2, y2, radius)</h4><p>根据给定的控制点和半径画一段圆弧，再以直线连接两个控制点。</p>
+<h3 id="二次贝塞尔曲线及三次贝塞尔曲线"><a href="#二次贝塞尔曲线及三次贝塞尔曲线" class="headerlink" title="二次贝塞尔曲线及三次贝塞尔曲线"></a>二次贝塞尔曲线及三次贝塞尔曲线</h3><h4 id="quadraticCurveTo-cp1x-cp1y-x-y"><a href="#quadraticCurveTo-cp1x-cp1y-x-y" class="headerlink" title="quadraticCurveTo(cp1x, cp1y, x, y)"></a>quadraticCurveTo(cp1x, cp1y, x, y)</h4><p>绘制二次贝塞尔曲线，<code>cp1x,cp1y</code>为一个控制点，<code>x,y为</code>结束点。</p>
+<h4 id="bezierCurveTo-cp1x-cp1y-cp2x-cp2y-x-y"><a href="#bezierCurveTo-cp1x-cp1y-cp2x-cp2y-x-y" class="headerlink" title="bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)"></a>bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)</h4><p>绘制三次贝塞尔曲线，<code>cp1x,cp1y</code>为控制点一，<code>cp2x,cp2y</code>为控制点二，<code>x,y</code>为结束点。</p>
+<h4 id="绘制心形QAQ"><a href="#绘制心形QAQ" class="headerlink" title="绘制心形QAQ"></a>绘制心形QAQ</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function draw() &#123;</span><br><span class="line"> var canvas = document.getElementById(&apos;canvas&apos;);</span><br><span class="line"> if (canvas.getContext)&#123;</span><br><span class="line"> var ctx = canvas.getContext(&apos;2d&apos;);</span><br><span class="line"></span><br><span class="line"> //三次贝塞尔曲线</span><br><span class="line"> ctx.beginPath();</span><br><span class="line"> ctx.moveTo(75,40);</span><br><span class="line"> ctx.bezierCurveTo(75,37,70,25,50,25);</span><br><span class="line"> ctx.bezierCurveTo(20,25,20,62.5,20,62.5);</span><br><span class="line"> ctx.bezierCurveTo(20,80,40,102,75,120);</span><br><span class="line"> ctx.bezierCurveTo(110,102,130,80,130,62.5);</span><br><span class="line"> ctx.bezierCurveTo(130,62.5,130,25,100,25);</span><br><span class="line"> ctx.bezierCurveTo(85,25,75,37,75,40);</span><br><span class="line"> ctx.fill();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="样式和色彩"><a href="#样式和色彩" class="headerlink" title="样式和色彩"></a>样式和色彩</h2><h3 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h3><h4 id="fillStyle-color"><a href="#fillStyle-color" class="headerlink" title="fillStyle = color"></a>fillStyle = color</h4><p>设置图形的填充颜色。</p>
+<h4 id="strokeStyle-color"><a href="#strokeStyle-color" class="headerlink" title="strokeStyle = color"></a>strokeStyle = color</h4><p>设置图形轮廓的颜色。</p>
+<h3 id="透明度"><a href="#透明度" class="headerlink" title="透明度"></a>透明度</h3><h4 id="globalAlpha-transparencyValue"><a href="#globalAlpha-transparencyValue" class="headerlink" title="globalAlpha = transparencyValue"></a>globalAlpha = transparencyValue</h4><p>这个属性影响到 canvas 里所有图形的透明度，有效的值范围是 0.0 （完全透明）到 1.0（完全不透明），默认是 1.0。</p>
+<h3 id="线型样式"><a href="#线型样式" class="headerlink" title="线型样式"></a>线型样式</h3><h4 id="lineWidth-value"><a href="#lineWidth-value" class="headerlink" title="lineWidth = value"></a>lineWidth = value</h4><p>设置线条宽度。</p>
+<h4 id="lineCap-type"><a href="#lineCap-type" class="headerlink" title="lineCap = type"></a>lineCap = type</h4><p>设置线条末端样式。</p>
+<h4 id="lineJoin-type"><a href="#lineJoin-type" class="headerlink" title="lineJoin = type"></a>lineJoin = type</h4><p>设定线条与线条间接合处的样式。</p>
+<h4 id="miterLimit-value"><a href="#miterLimit-value" class="headerlink" title="miterLimit = value"></a>miterLimit = value</h4><p>限制当两条线相交时交接处最大长度；所谓交接处长度（斜接长度）是指线条交接处内角顶点到外角顶点的长度。</p>
+<h4 id="getLineDash"><a href="#getLineDash" class="headerlink" title="getLineDash()"></a>getLineDash()</h4><p>返回一个包含当前虚线样式，长度为非负偶数的数组。</p>
+<h4 id="setLineDash-segments"><a href="#setLineDash-segments" class="headerlink" title="setLineDash(segments)"></a>setLineDash(segments)</h4><p>设置当前虚线样式。</p>
+<h4 id="lineDashOffset-value"><a href="#lineDashOffset-value" class="headerlink" title="lineDashOffset = value"></a>lineDashOffset = value</h4><p>设置虚线样式的起始偏移量。</p>
+<h3 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h3><h4 id="createLinearGradient-x1-y1-x2-y2"><a href="#createLinearGradient-x1-y1-x2-y2" class="headerlink" title="createLinearGradient(x1, y1, x2, y2)"></a>createLinearGradient(x1, y1, x2, y2)</h4><p>createLinearGradient 方法接受 4 个参数，表示渐变的起点 (x1,y1) 与终点 (x2,y2)。</p>
+<h4 id="createRadialGradient-x1-y1-r1-x2-y2-r2"><a href="#createRadialGradient-x1-y1-r1-x2-y2-r2" class="headerlink" title="createRadialGradient(x1, y1, r1, x2, y2, r2)"></a>createRadialGradient(x1, y1, r1, x2, y2, r2)</h4><p>createRadialGradient 方法接受 6 个参数，前三个定义一个以 (x1,y1) 为原点，半径为 r1 的圆，后三个参数则定义另一个以 (x2,y2) 为原点，半径为 r2 的圆。</p>
+<h4 id="addColorStop-position-color"><a href="#addColorStop-position-color" class="headerlink" title="addColorStop(position, color)"></a>addColorStop(position, color)</h4><p>addColorStop 方法接受 2 个参数，<code>position</code> 参数必须是一个 0.0 与 1.0 之间的数值，表示渐变中颜色所在的相对位置。例如，0.5 表示颜色会出现在正中间。<code>color</code> 参数必须是一个有效的 CSS 颜色值（如 #FFF， rgba(0,0,0,1)，等等）。</p>
+<h3 id="图案样式"><a href="#图案样式" class="headerlink" title="图案样式"></a>图案样式</h3><h4 id="createPattern-image-type"><a href="#createPattern-image-type" class="headerlink" title="createPattern(image, type)"></a>createPattern(image, type)</h4><p>该方法接受两个参数。Image 可以是一个 <code>Image</code> 对象的引用，或者另一个 canvas 对象。<code>Type</code> 必须是下面的字符串值之一：<code>repeat</code>，<code>repeat-x</code>，<code>repeat-y</code> 和 <code>no-repeat</code>。</p>
+<h3 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h3><h4 id="shadowOffsetX-float"><a href="#shadowOffsetX-float" class="headerlink" title="shadowOffsetX = float"></a>shadowOffsetX = float</h4><p><code>shadowOffsetX</code> 和 <code>shadowOffsetY</code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code>0</code>。</p>
+<h4 id="shadowOffsetY-float"><a href="#shadowOffsetY-float" class="headerlink" title="shadowOffsetY = float"></a>shadowOffsetY = float</h4><p>shadowOffsetX 和 <code>shadowOffsetY</code>用来设定阴影在 X 和 Y 轴的延伸距离，它们是不受变换矩阵所影响的。负值表示阴影会往上或左延伸，正值则表示会往下或右延伸，它们默认都为 <code>0</code>。</p>
+<h4 id="shadowBlur-float"><a href="#shadowBlur-float" class="headerlink" title="shadowBlur = float"></a>shadowBlur = float</h4><p>shadowBlur 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 <code>0</code>。</p>
+<h4 id="shadowColor-color"><a href="#shadowColor-color" class="headerlink" title="shadowColor = color"></a>shadowColor = color</h4><p>shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。</p>
+<h3 id="填充规则"><a href="#填充规则" class="headerlink" title="填充规则"></a>填充规则</h3><p>当我们用到 <code>fill</code>（或者 <code>clip</code>和<code>isPointinPath</code>）你可以选择一个填充规则，该填充规则根据某处在路径的外面或者里面来决定该处是否被填充，这对于自己与自己路径相交或者路径被嵌套的时候是有用的。</p>
+<p>两个可能的值：</p>
+<p> <code>nonzero</code>: <a href="http://en.wikipedia.org/wiki/Nonzero-rule" target="_blank" rel="noopener">non-zero winding rule</a>, 默认值.</p>
+<p><code>evenodd</code>:  <a href="http://en.wikipedia.org/wiki/Even–odd_rule" target="_blank" rel="noopener">even-odd winding rule</a>.</p>
+<h2 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h2><h3 id="绘制文本-1"><a href="#绘制文本-1" class="headerlink" title="绘制文本"></a>绘制文本</h3><p>canvas 提供了两种方法来渲染文本:</p>
+<h4 id="fillText-text-x-y-maxWidth"><a href="#fillText-text-x-y-maxWidth" class="headerlink" title="fillText(text, x, y [, maxWidth])"></a>fillText(text, x, y [, maxWidth])</h4><p>在指定的(x,y)位置填充指定的文本，绘制的最大宽度是可选的.</p>
+<h4 id="strokeText-text-x-y-maxWidth"><a href="#strokeText-text-x-y-maxWidth" class="headerlink" title="strokeText(text, x, y [, maxWidth])"></a>strokeText(text, x, y [, maxWidth])</h4><p>在指定的(x,y)位置绘制文本边框，绘制的最大宽度是可选的.</p>
+<h3 id="有样式的文本"><a href="#有样式的文本" class="headerlink" title="有样式的文本"></a>有样式的文本</h3><h4 id="font-value"><a href="#font-value" class="headerlink" title="font = value"></a>font = value</h4><p>当前我们用来绘制文本的样式. 这个字符串使用和 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">CSS</a> <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font" target="_blank" rel="noopener"><code>font</code></a> 属性相同的语法. 默认的字体是 <code>10px sans-serif</code>。</p>
+<h4 id="textAlign-value"><a href="#textAlign-value" class="headerlink" title="textAlign = value"></a>textAlign = value</h4><p>文本对齐选项. 可选的值包括：<code>start</code>, <code>end</code>, <code>left</code>, <code>right</code> or <code>center</code>. 默认值是 <code>start</code>。</p>
+<h4 id="textBaseline-value"><a href="#textBaseline-value" class="headerlink" title="textBaseline = value"></a>textBaseline = value</h4><p>基线对齐选项. 可选的值包括：<code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code>, <code>ideographic</code>, <code>bottom</code>。默认值是 <code>alphabetic。</code></p>
+<h4 id="direction-value"><a href="#direction-value" class="headerlink" title="direction = value"></a>direction = value</h4><p>文本方向。可能的值包括：<code>ltr</code>, <code>rtl</code>, <code>inherit</code>。默认值是 <code>inherit。</code></p>
+<h3 id="预测量文本宽度"><a href="#预测量文本宽度" class="headerlink" title="预测量文本宽度"></a>预测量文本宽度</h3><h4 id="measureText"><a href="#measureText" class="headerlink" title="measureText()"></a>measureText()</h4><p>将返回一个 <code>TextMetrics</code>对象的宽度、所在像素，这些体现文本特性的属性。</p>
+<h2 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h2><h3 id="状态的保存和恢复"><a href="#状态的保存和恢复" class="headerlink" title="状态的保存和恢复"></a>状态的保存和恢复</h3><h4 id="save"><a href="#save" class="headerlink" title="save()"></a>save()</h4><p>保存画布(canvas)的所有状态</p>
+<h4 id="restore"><a href="#restore" class="headerlink" title="restore()"></a>restore()</h4><p>save 和 restore 方法是用来保存和恢复 canvas 状态的，都没有参数。Canvas 的状态就是当前画面应用的所有样式和变形的一个快照。</p>
+<h3 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h3><h4 id="translate-x-y"><a href="#translate-x-y" class="headerlink" title="translate(x, y)"></a>translate(x, y)</h4><p><code>translate</code>方法接受两个参数。x 是左右偏移量，y 是上下偏移量。</p>
+<h3 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h3><h4 id="rotate-angle"><a href="#rotate-angle" class="headerlink" title="rotate(angle)"></a>rotate(angle)</h4><p>这个方法只接受一个参数：旋转的角度(angle)，它是顺时针方向的，以弧度为单位的值。</p>
+<h3 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h3><h4 id="scale-x-y"><a href="#scale-x-y" class="headerlink" title="scale(x, y)"></a>scale(x, y)</h4><p><code>scale</code> 方法可以缩放画布的水平和垂直的单位。两个参数都是实数，可以为负数，x 为水平缩放因子，y 为垂直缩放因子，如果比1小，会比缩放图形， 如果比1大会放大图形。默认值为1， 为实际大小。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/canvas/" rel="tag"># canvas</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/10/react入门/" rel="next" title="react入门">
+                <i class="fa fa-chevron-left"></i> react入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">doudou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#canvas教程"><span class="nav-number">1.</span> <span class="nav-text">canvas教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本用法"><span class="nav-number">1.1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制形状"><span class="nav-number">1.2.</span> <span class="nav-text">绘制形状</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制矩形"><span class="nav-number">1.2.1.</span> <span class="nav-text">绘制矩形</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fillRect-x-y-width-height"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">fillRect(x, y, width, height)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strokeRect-x-y-width-height"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">strokeRect(x, y, width, height)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clearRect-x-y-width-height"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">clearRect(x, y, width, height)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rect-x-y-width-height"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">rect(x, y, width, height)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制路径"><span class="nav-number">1.2.2.</span> <span class="nav-text">绘制路径</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#beginPath"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">beginPath()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#closePath"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">closePath()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stroke"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">stroke()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fill"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">fill()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clip"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">clip()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动笔触"><span class="nav-number">1.2.3.</span> <span class="nav-text">移动笔触</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#moveTo-x-y"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">moveTo(x, y)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制线"><span class="nav-number">1.2.4.</span> <span class="nav-text">绘制线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lineTo-x-y"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">lineTo(x, y)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制圆弧"><span class="nav-number">1.2.5.</span> <span class="nav-text">绘制圆弧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#arc-x-y-radius-startAngle-endAngle-anticlockwise"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">arc(x, y, radius, startAngle, endAngle, anticlockwise)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#arcTo-x1-y1-x2-y2-radius"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">arcTo(x1, y1, x2, y2, radius)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二次贝塞尔曲线及三次贝塞尔曲线"><span class="nav-number">1.2.6.</span> <span class="nav-text">二次贝塞尔曲线及三次贝塞尔曲线</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#quadraticCurveTo-cp1x-cp1y-x-y"><span class="nav-number">1.2.6.1.</span> <span class="nav-text">quadraticCurveTo(cp1x, cp1y, x, y)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bezierCurveTo-cp1x-cp1y-cp2x-cp2y-x-y"><span class="nav-number">1.2.6.2.</span> <span class="nav-text">bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绘制心形QAQ"><span class="nav-number">1.2.6.3.</span> <span class="nav-text">绘制心形QAQ</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#样式和色彩"><span class="nav-number">1.3.</span> <span class="nav-text">样式和色彩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#色彩"><span class="nav-number">1.3.1.</span> <span class="nav-text">色彩</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fillStyle-color"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">fillStyle = color</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strokeStyle-color"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">strokeStyle = color</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#透明度"><span class="nav-number">1.3.2.</span> <span class="nav-text">透明度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#globalAlpha-transparencyValue"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">globalAlpha = transparencyValue</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线型样式"><span class="nav-number">1.3.3.</span> <span class="nav-text">线型样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lineWidth-value"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">lineWidth = value</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lineCap-type"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">lineCap = type</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lineJoin-type"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">lineJoin = type</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#miterLimit-value"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">miterLimit = value</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getLineDash"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">getLineDash()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setLineDash-segments"><span class="nav-number">1.3.3.6.</span> <span class="nav-text">setLineDash(segments)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lineDashOffset-value"><span class="nav-number">1.3.3.7.</span> <span class="nav-text">lineDashOffset = value</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#渐变"><span class="nav-number">1.3.4.</span> <span class="nav-text">渐变</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#createLinearGradient-x1-y1-x2-y2"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">createLinearGradient(x1, y1, x2, y2)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#createRadialGradient-x1-y1-r1-x2-y2-r2"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">createRadialGradient(x1, y1, r1, x2, y2, r2)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#addColorStop-position-color"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">addColorStop(position, color)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图案样式"><span class="nav-number">1.3.5.</span> <span class="nav-text">图案样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#createPattern-image-type"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">createPattern(image, type)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阴影"><span class="nav-number">1.3.6.</span> <span class="nav-text">阴影</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#shadowOffsetX-float"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">shadowOffsetX = float</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shadowOffsetY-float"><span class="nav-number">1.3.6.2.</span> <span class="nav-text">shadowOffsetY = float</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shadowBlur-float"><span class="nav-number">1.3.6.3.</span> <span class="nav-text">shadowBlur = float</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shadowColor-color"><span class="nav-number">1.3.6.4.</span> <span class="nav-text">shadowColor = color</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#填充规则"><span class="nav-number">1.3.7.</span> <span class="nav-text">填充规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绘制文本"><span class="nav-number">1.4.</span> <span class="nav-text">绘制文本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#绘制文本-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">绘制文本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fillText-text-x-y-maxWidth"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">fillText(text, x, y [, maxWidth])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strokeText-text-x-y-maxWidth"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">strokeText(text, x, y [, maxWidth])</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有样式的文本"><span class="nav-number">1.4.2.</span> <span class="nav-text">有样式的文本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#font-value"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">font = value</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textAlign-value"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">textAlign = value</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textBaseline-value"><span class="nav-number">1.4.2.3.</span> <span class="nav-text">textBaseline = value</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#direction-value"><span class="nav-number">1.4.2.4.</span> <span class="nav-text">direction = value</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预测量文本宽度"><span class="nav-number">1.4.3.</span> <span class="nav-text">预测量文本宽度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#measureText"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">measureText()</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变形"><span class="nav-number">1.5.</span> <span class="nav-text">变形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#状态的保存和恢复"><span class="nav-number">1.5.1.</span> <span class="nav-text">状态的保存和恢复</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#save"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">save()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#restore"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">restore()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动"><span class="nav-number">1.5.2.</span> <span class="nav-text">移动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#translate-x-y"><span class="nav-number">1.5.2.1.</span> <span class="nav-text">translate(x, y)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#旋转"><span class="nav-number">1.5.3.</span> <span class="nav-text">旋转</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#rotate-angle"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">rotate(angle)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缩放"><span class="nav-number">1.5.4.</span> <span class="nav-text">缩放</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#scale-x-y"><span class="nav-number">1.5.4.1.</span> <span class="nav-text">scale(x, y)</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">doudou</span>
+
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+-->
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+<!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
