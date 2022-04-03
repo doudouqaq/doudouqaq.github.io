@@ -20,27 +20,29 @@
       </tags>
   </entry>
   <entry>
-    <title>关于我</title>
-    <url>/2099/12/31/%E5%85%B3%E4%BA%8E%E6%88%91/</url>
-    <content><![CDATA[<h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><h2 id="0x01-我是谁"><a href="#0x01-我是谁" class="headerlink" title="0x01 我是谁"></a>0x01 我是谁</h2><blockquote>
-<p>屏幕前的朋友，很高兴能在这里与你相遇~</p>
-</blockquote>
-<p>我叫窦瑞璞，大家叫我豆豆就好了，当然豆子哥、窦师傅也ok~</p>
-<p>我是河北秦皇岛人，目前在北京，1998年出生，生日是6月13日，双子座。</p>
+    <title>Docker学习</title>
+    <url>/2022/03/30/docker%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="Docker概念"><a href="#Docker概念" class="headerlink" title="Docker概念"></a>Docker概念</h2><p>Docker是基于Go语言实现的开源容器项目。可以将Docker容器理解为一种轻量级的沙盒。每个容器内运行着一个应用，不同的容器相互隔离，容器之间也可以通过网络互相通信。Docker属于操作系统虚拟化范畴</p>
 <span id="more"></span>
 
-<h2 id="0x02-履历"><a href="#0x02-履历" class="headerlink" title="0x02 履历"></a>0x02 履历</h2><p>2017-2021年就读于南京航空航天大学软件工程专业（感谢学校让我毕业</p>
-<p>2021年本科毕业后来到字节跳动从事前端开发工作（感谢公司不嫌我菜</p>
-<h2 id="0x03-性格"><a href="#0x03-性格" class="headerlink" title="0x03 性格"></a>0x03 性格</h2><p>社交废物，比较腼腆，但是脾气还不错~</p>
-<p>还算比较要强吧，自尊心比较脆弱QAQ</p>
-<h2 id="0x04-兴趣爱好"><a href="#0x04-兴趣爱好" class="headerlink" title="0x04 兴趣爱好"></a>0x04 兴趣爱好</h2><p>特别的兴趣爱好倒是没什么，比较佛系</p>
-<p>平时喜欢打游戏，喜欢英雄联盟，技术一般，全靠曹师傅和方师傅C，也喜欢下下棋（老赌狗了</p>
-<p>最近打算学学摄影和PS呢，还想减肥！</p>
-<h2 id="0x05-联系我"><a href="#0x05-联系我" class="headerlink" title="0x05 联系我"></a>0x05 联系我</h2><h3 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h3><p><img src="/2099/12/31/%E5%85%B3%E4%BA%8E%E6%88%91/wechat.png" alt="wechat"></p>
-<h3 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h3><p><img src="/2099/12/31/%E5%85%B3%E4%BA%8E%E6%88%91/qq.png" alt="qq"></p>
-<h3 id="邮箱-49-48-57-52-x35-50-57-x34-52-51-64-x71-x71-x2e-x63-111-109"><a href="#邮箱-49-48-57-52-x35-50-57-x34-52-51-64-x71-x71-x2e-x63-111-109" class="headerlink" title="邮箱: &#49;&#48;&#57;&#52;&#x35;&#50;&#57;&#x34;&#52;&#51;&#64;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;"></a>邮箱: <a href="mailto:&#49;&#48;&#57;&#52;&#x35;&#50;&#57;&#x34;&#52;&#51;&#64;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;">&#49;&#48;&#57;&#52;&#x35;&#50;&#57;&#x34;&#52;&#51;&#64;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;</a></h3><h3 id="github-以后尽量多更新，不做懒狗"><a href="#github-以后尽量多更新，不做懒狗" class="headerlink" title="github(以后尽量多更新，不做懒狗"></a><a href="https://github.com/doudouqaq">github(以后尽量多更新，不做懒狗</a></h3>]]></content>
+<p>Docker的三大核心概念：</p>
+<ul>
+<li><p>镜像（Image）——镜像是创建Docker容器的基础；镜像自身是只读的</p>
+</li>
+<li><p>容器（Container）——容器是从镜像创建的应用运行实例</p>
+</li>
+<li><p>仓库（Repository）——仓库是Docker集中存放镜像文件的场所</p>
+</li>
+</ul>
+<h2 id="Docker使用"><a href="#Docker使用" class="headerlink" title="Docker使用"></a>Docker使用</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker [image] pull NAME[:TAG]</span><br><span class="line">  -a, --all-tags=true|false：是否获取仓库中的所有镜像，默认为否；</span><br><span class="line">  --disable-content-trust：取消镜像的内容校验，默认为真。</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看镜像信息"><a href="#查看镜像信息" class="headerlink" title="查看镜像信息"></a>查看镜像信息</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker images</span><br><span class="line">docker image ls</span><br><span class="line">  -a, --all=true|false：列出所有（包括临时文件）镜像文件，默认为否；</span><br><span class="line">  --digests=true|false：列出镜像的数字摘要值，默认为否；</span><br><span class="line">  -f, --filter=[]：过滤列出的镜像，如dangling=true只显示没有被使用的镜像；也可指定带有特定标注的镜像等；</span><br><span class="line">  --format=&quot;TEMPLATE&quot;：控制输出格式，如．ID代表ID信息，.Repository代表仓库信息等；</span><br><span class="line">  --no-trunc=true|false：对输出结果中太长的部分是否进行截断，如镜像的ID信息，默认为是；</span><br><span class="line">  -q, --quiet=true|false：仅输出ID信息，默认为否。</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除和清理镜像"><a href="#删除和清理镜像" class="headerlink" title="删除和清理镜像"></a>删除和清理镜像</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker rmi或docker image rm</span><br><span class="line">  -f, -force：强制删除镜像，即使有容器依赖它；</span><br><span class="line">  -no-prune：不要清理未带标签的父镜像。</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <tags>
-        <tag>我</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
@@ -128,6 +130,65 @@
 ]]></content>
       <tags>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于我</title>
+    <url>/2099/12/31/%E5%85%B3%E4%BA%8E%E6%88%91/</url>
+    <content><![CDATA[<h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><h2 id="0x01-我是谁"><a href="#0x01-我是谁" class="headerlink" title="0x01 我是谁"></a>0x01 我是谁</h2><blockquote>
+<p>屏幕前的朋友，很高兴能在这里与你相遇~</p>
+</blockquote>
+<p>我叫窦瑞璞，大家叫我豆豆就好了，当然豆子哥、窦师傅也ok~</p>
+<p>我是河北秦皇岛人，目前在北京，1998年出生，生日是6月13日，双子座。</p>
+<span id="more"></span>
+
+<h2 id="0x02-履历"><a href="#0x02-履历" class="headerlink" title="0x02 履历"></a>0x02 履历</h2><p>2017-2021年就读于南京航空航天大学软件工程专业（感谢学校让我毕业</p>
+<p>2021年本科毕业后来到字节跳动从事前端开发工作（感谢公司不嫌我菜</p>
+<h2 id="0x03-性格"><a href="#0x03-性格" class="headerlink" title="0x03 性格"></a>0x03 性格</h2><p>社交废物，比较腼腆，但是脾气还不错~</p>
+<p>还算比较要强吧，自尊心比较脆弱QAQ</p>
+<h2 id="0x04-兴趣爱好"><a href="#0x04-兴趣爱好" class="headerlink" title="0x04 兴趣爱好"></a>0x04 兴趣爱好</h2><p>特别的兴趣爱好倒是没什么，比较佛系</p>
+<p>平时喜欢打游戏，喜欢英雄联盟，技术一般，全靠曹师傅和方师傅C，也喜欢下下棋（老赌狗了</p>
+<p>最近打算学学摄影和PS呢，还想减肥！</p>
+<h2 id="0x05-联系我"><a href="#0x05-联系我" class="headerlink" title="0x05 联系我"></a>0x05 联系我</h2><h3 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h3><p><img src="/2099/12/31/%E5%85%B3%E4%BA%8E%E6%88%91/wechat.png" alt="wechat"></p>
+<h3 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h3><p><img src="/2099/12/31/%E5%85%B3%E4%BA%8E%E6%88%91/qq.png" alt="qq"></p>
+<h3 id="邮箱-x31-x30-57-x34-53-50-57-x34-52-51-64-113-x71-x2e-99-x6f-109"><a href="#邮箱-x31-x30-57-x34-53-50-57-x34-52-51-64-113-x71-x2e-99-x6f-109" class="headerlink" title="邮箱: &#x31;&#x30;&#57;&#x34;&#53;&#50;&#57;&#x34;&#52;&#51;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;"></a>邮箱: <a href="mailto:&#x31;&#x30;&#57;&#x34;&#53;&#50;&#57;&#x34;&#52;&#51;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;">&#x31;&#x30;&#57;&#x34;&#53;&#50;&#57;&#x34;&#52;&#51;&#64;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;</a></h3><h3 id="github-以后尽量多更新，不做懒狗"><a href="#github-以后尽量多更新，不做懒狗" class="headerlink" title="github(以后尽量多更新，不做懒狗"></a><a href="https://github.com/doudouqaq">github(以后尽量多更新，不做懒狗</a></h3>]]></content>
+      <tags>
+        <tag>我</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用导航</title>
+    <url>/2022/03/31/%E5%B8%B8%E7%94%A8%E5%AF%BC%E8%88%AA/</url>
+    <content><![CDATA[<h2 id="编程资源"><a href="#编程资源" class="headerlink" title="编程资源"></a>编程资源</h2><p><a href="https://github.com/CavsZhouyou/Front-End-Interview-Notebook">前端面试题</a></p>
+]]></content>
+      <tags>
+        <tag>导航</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>感悟人生</title>
+    <url>/2022/04/04/%E6%84%9F%E6%82%9F%E4%BA%BA%E7%94%9F/</url>
+    <content><![CDATA[<h2 id="停下来思考一下人生"><a href="#停下来思考一下人生" class="headerlink" title="停下来思考一下人生"></a>停下来思考一下人生</h2><blockquote>
+<p> 人生的意义是什么？忙忙碌碌为了得到的又是什么？</p>
+</blockquote>
+<span id="more"></span>
+
+<p>人生就像弈棋，一步失误，全盘皆输。</p>
+<p>人之所以痛苦，在于追求错误的东西。</p>
+<h2 id="摘录一些唯美的诗词"><a href="#摘录一些唯美的诗词" class="headerlink" title="摘录一些唯美的诗词"></a>摘录一些唯美的诗词</h2><p>海水梦悠悠，君愁我亦愁。 一一佚名《西洲曲》</p>
+<p>与君初相识，犹如故人归。 ——佚名</p>
+<p>我见青山多妩媚，料青山见我应如是。 一一辛弃疾《贺新郎》</p>
+<p>桃之夭夭，灼灼其华。之子于归，宜其室家。 一一《诗经•周南•桃夭》</p>
+<p>天不老，情难绝。心似双丝网，中有千千结。——张先《千秋岁》</p>
+<p>山中何事，松花酿酒，春水煎茶。 一一张可久《人月圆•山中书事》</p>
+<p>海上月是天上月，眼前人是心上人。 向来心是看客心，奈何人是剧中人。——张爱玲《倾城之恋》</p>
+<p>执手相看泪眼，竟无语凝噎。——柳永《雨霖铃》</p>
+<p>曾与美人桥上别，恨无消息到今朝。——刘禹锡《杨柳枝》</p>
+<p>人生自是有情痴，此恨不关风与月。——欧阳修《玉楼春》</p>
+<p>这次第，怎一个愁字了得。——李清照《声声慢》</p>
+]]></content>
+      <tags>
+        <tag>人生</tag>
       </tags>
   </entry>
   <entry>
